@@ -45,19 +45,33 @@ Time.zone = "Brasilia"
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 
-# gzip
+
 helpers do
+
+  # gzip css
   def gzip_css_on_build(key)
     o = stylesheet_link_tag(key)
     o.sub!(".css", ".css.gz") if build?
     o
   end
 
+  # gzip js
   def gzip_js_on_build(key)
     o = javascript_include_tag(key)
     o.sub!(".js", ".js.gz") if build?
     o
   end
+
+  # Calculate the years for a copyright
+  def copyright_years(start_year)
+    end_year = Date.today.year
+    if start_year == end_year
+      start_year.to_s
+    else
+      start_year.to_s + '-' + end_year.to_s
+    end
+  end
+
 end
 
 
@@ -80,6 +94,9 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+
+  # Add asset fingerprinting to avoid cache issues
+  activate :asset_hash
 
   # Enable cache buster
   # activate :cache_buster
