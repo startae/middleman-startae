@@ -1,0 +1,7 @@
+javascript:
+  head.js("#{{javascript_path 'vendor'}}", "#{{javascript_path 'application'}}")
+/[if (gte IE 6)&(lte IE 8)]
+  == javascript_include_tag 'http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js'
+  == javascript_include_tag :selectivizr
+== partial 'partials/development'
+== partial 'partials/analytics'
