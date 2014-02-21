@@ -16,13 +16,13 @@ run Middleman.server
 
 
 # Serve a 404 page if all else fails
-# run lambda { |env|
-#   [
-#     404,
-#     {
-#       "Content-Type"  => "text/html",
-#       "Cache-Control" => "public, max-age=60"
-#     },
-#     File.open("tmp/404/index.html", File::RDONLY)
-#   ]
-# }
+run lambda { |env|
+  [
+    404,
+    {
+      "Content-Type"  => "text/html",
+      "Cache-Control" => "public, max-age=60"
+    },
+    File.open("404.html", File::RDONLY)
+  ]
+}
