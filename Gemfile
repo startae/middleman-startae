@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 # server
 gem 'unicorn', '~> 4.8.2'
