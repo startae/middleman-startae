@@ -1,0 +1,13 @@
+head
+  meta charset='utf-8'
+  title = current_page.data.title || 'Middleman Startaê'
+  title = current_page.data.description || 'Description Middleman Startaê'
+  meta http-equiv='X-UA-Compatible' content='IE=edge'
+  meta content='on' http-equiv='cleartype'
+  meta content='True' name='HandheldFriendly'
+  meta content='320' name='MobileOptimized'
+  meta content='initial-scale=1, user-scalable=yes ,maximum-scale=1, width=device-width' name='viewport'
+  link rel="shortcut icon" href="images/favicon.png"
+  == stylesheet_link_tag 'application.css', media: 'all'
+  / /[if lt IE 9]
+  /   == javascript_include_tag 'html5shiv/dist/html5shiv-printshiv'
