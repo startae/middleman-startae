@@ -12,17 +12,6 @@ html.no-js lang='#{I18n.locale}'
   | <!--<![endif]-->
   == partial 'partials/head'
   body class="#{@body_class} #{page_classes}" ontouchstart=''
-/     == partial 'partials/body_top'
-/     == yield
-/     == partial 'partials/body_bottom'
-
-
-
-
-
-
-/ == partial 'partials/head'
-/ == partial 'partials/header'
-/ == yield
-/ == partial 'partials/footer'
-/ == partial 'partials/bottom'
+    == partial 'partials/body_top'
+    == yield
+    == partial 'partials/body_bottom'
