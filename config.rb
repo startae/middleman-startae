@@ -1,51 +1,29 @@
-require 'rubygems'
-require 'middleman'
-
-
-
 # Slim HTML
-########################################################
-require "slim"
-Slim::Engine.set_default_options format: :html5
-Slim::Engine.set_default_options pretty: true
-Slim::Engine.set_default_options tabsize: 2
-Slim::Engine.set_default_options escape_quoted_attrs: true
+# ----------------------------------------------
+Slim::Engine.set_default_options pretty: true, sort_attrs: false, format: :html5, tabsize: 2
 
+
+# i18n
+# ----------------------------------------------
+activate :i18n, :mount_at_root => :'pt-BR'
+# ::I18n.config.enforce_available_locales = true
+# ::I18n.config.default_locale = 'pt-BR'
+# I18n.config.enforce_available_locales = true
+# ::I18n.config.i18n.default_locale = 'pt-BR'
 
 
 # Livereload
-########################################################
+# ----------------------------------------------
 activate :livereload
 
 
-
-# Compass
-########################################################
-
-# Susy grids in Compass
-require 'susy'
-
-# Compass configuration
-compass_config do |config|
-  config.output_style = :expanded
-  config.preferred_syntax = :sass
-end
-
-
-
 # Page options, layouts, aliases and proxies
-########################################################
-Time.zone = "Brasilia"
+# ----------------------------------------------
 
 
 
 # Helpers
-########################################################
-
-# Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
-
-
+# ----------------------------------------------
 helpers do
 
   # gzip css
@@ -75,7 +53,16 @@ helpers do
 end
 
 
-# activate :directory_indexes
+
+# Other configurations
+# ----------------------------------------------
+# Automatic image dimensions on image_tag helper
+activate :automatic_image_sizes
+activate :directory_indexes
+
+
+# Configure assets directories
+# ----------------------------------------------
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
@@ -83,13 +70,22 @@ set :fonts_dir, 'assets/fonts'
 
 
 
+# Development-specific configuration
+# ----------------------------------------------
+configure :development do
+  activate :relative_assets
+end
+
+
+
 # Build-specific configuration
+# ----------------------------------------------
 configure :build do
 
   # Activate gzip
   activate :gzip
 
-  # For example, change the Compass output style for deployment
+  # Minify CSS on build
   activate :minify_css
 
   # Minify Javascript on build
@@ -98,17 +94,4 @@ configure :build do
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash
 
-  # Enable cache buster
-  # activate :cache_buster
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
-
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
 end
