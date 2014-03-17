@@ -4,14 +4,6 @@ require 'middleman/rack'
 run Middleman.server
 
 
-# PROTECT PAGE WITH PASSWORD
-if ENV["PASSWORD_PROTECTED"] == true
-  use Rack::Auth::Basic, "Restricted Area" do |username, password|
-    [username, password] == [ENV["HTTP_USERNAME"], ENV["HTTP_PASSWORD"]]
-  end
-end
-
-
 # Modified version of TryStatic, from rack-contrib
 # https://github.com/rack/rack-contrib/blob/master/lib/rack/contrib/try_static.rb
 
