@@ -12,5 +12,5 @@ head
   link rel='shortcut icon' href='#{image_path('favicon.png')}'
   == stylesheet_link_tag 'application.css', media: 'all'
   /[if lt IE 9]
-    == javascript_include_tag 'bower_components/html5shiv/dist/html5shiv-printshiv'
+    == javascript_include_tag 'ie-lt-9'
   == yield_content :head
