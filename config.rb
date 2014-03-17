@@ -1,3 +1,8 @@
+# Site Settings
+# ----------------------------------------------
+@analytics_account = false
+
+
 # Slim HTML
 # ----------------------------------------------
 Slim::Engine.set_default_options pretty: true, sort_attrs: false, format: :html5, tabsize: 2
@@ -59,6 +64,14 @@ end
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 activate :directory_indexes
+
+
+# Bower config
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
 
 
 # Configure assets directories
