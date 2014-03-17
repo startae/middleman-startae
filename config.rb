@@ -11,10 +11,6 @@ Slim::Engine.set_default_options pretty: true, sort_attrs: false, format: :html5
 # i18n
 # ----------------------------------------------
 activate :i18n, :mount_at_root => :'pt-BR'
-# ::I18n.config.enforce_available_locales = true
-# ::I18n.config.default_locale = 'pt-BR'
-# I18n.config.enforce_available_locales = true
-# ::I18n.config.i18n.default_locale = 'pt-BR'
 
 
 # Livereload
