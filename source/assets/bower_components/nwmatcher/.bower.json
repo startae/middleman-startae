@@ -1,0 +1,14 @@
+{
+  "name": "nwmatcher",
+  "homepage": "https://github.com/dperini/nwmatcher",
+  "version": "1.2.5",
+  "_release": "1.2.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.5",
+    "commit": "872cfb9c3bed10cc2234f75350134f38342154f2"
+  },
+  "_source": "git://github.com/dperini/nwmatcher.git",
+  "_target": "~1.2.5",
+  "_originalSource": "nwmatcher"
+}

@@ -16,6 +16,3 @@ install.log
 # Ignore Sass' cache
 /.sass-cache
 .cache
-
-# Ignore components directory. Will need to change this if you change bower's install path
-/bower_components
