@@ -55,6 +55,31 @@ helpers do
     end
   end
 
+  def current_year
+    Time.now.year
+  end
+
+  # FAKER HELPERS
+  def random_name
+    Faker::Name.name
+  end
+
+  def random_address
+    "#{Faker::Address.street_address},<br/>#{Faker::Address.city}, #{Faker::Address.state}<br/>#{Faker::Address.postcode}"
+  end
+
+  def random_company_name
+    Faker::Company.name
+  end
+
+  def random_phone_number
+    Faker::PhoneNumber.phone_number
+  end
+
+  def random_email_address
+    Faker::Internet.email
+  end
+
 end
 
 
