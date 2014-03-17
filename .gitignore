@@ -4,3 +4,4 @@
 us.stackdump
 build/
 install.log
+*.cache
