@@ -1,0 +1,13 @@
+{
+  "name": "middleman-startae",
+  "version": "0.0.1",
+  "private": "true",
+  "authors": [
+    "Startaê <http://www.startae.com.br>",
+    "Renato Carvalho <renatolz@gmail.com>"
+  ],
+  "dependencies": {
+    "html5shiv": "~3.7.0",
+    "selectivizr": "~1.0.2"
+  }
+}
