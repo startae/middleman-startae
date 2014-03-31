@@ -8,6 +8,13 @@
 Slim::Engine.set_default_options pretty: true, sort_attrs: false, format: :html5, tabsize: 2
 
 
+# Compass configuration
+compass_config do |config|
+  config.output_style = :expanded
+  config.preferred_syntax = :sass
+end
+
+
 # i18n
 # ----------------------------------------------
 activate :i18n, :mount_at_root => :'pt-BR'
@@ -116,6 +123,9 @@ end
 # ----------------------------------------------
 configure :build do
 
+  # Use relative URLs
+  activate :relative_assets
+
   # Activate gzip
   activate :gzip
 
@@ -128,4 +138,11 @@ configure :build do
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash
 
+  # Enable cache buster
+  # activate :cache_buster
+
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  # require "middleman-smusher"
+  # activate :smusher
 end
