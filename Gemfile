@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
 
 # server
 gem 'unicorn', '~> 4.8.2'
 
 # Middleman Gems
-gem 'middleman', '~> 3.2.2'
+# gem 'middleman', '~> 3.2.2'
+gem 'middleman', :github => "middleman/middleman", :branch => "v3-stable"
 gem 'middleman-livereload', '~> 3.3.0'
 gem 'middleman-smusher', '~> 3.0.0'
 
