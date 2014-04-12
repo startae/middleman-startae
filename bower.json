@@ -1,6 +1,6 @@
 {
   "name": "middleman-startae",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": "true",
   "authors": [
     "Startaê <http://www.startae.com.br>",
@@ -9,8 +9,8 @@
   "dependencies": {
     "html5shiv": "~3.7.0",
     "selectivizr": "~1.0.2",
-    "bourbon": "~3.1.8",
-    "neat": "~1.5.0",
-    "nwmatcher": "~1.2.5"
+    "bourbon": "~4.0.0-rc.2",
+    "neat": "~1.6.0",
+    "nwmatcher": "~1.3.1"
   }
 }

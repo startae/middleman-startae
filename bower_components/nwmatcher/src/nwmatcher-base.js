@@ -1,13 +1,13 @@
 /*
- * Copyright (C) 2007-2012 Diego Perini
+ * Copyright (C) 2007-2013 Diego Perini
  * All rights reserved.
  *
  * nwmatcher-base.js - A fast CSS selector engine and matcher
  *
  * Author: Diego Perini <diego.perini at gmail com>
- * Version: 1.2.5
+ * Version: 1.3.1
  * Created: 20070722
- * Release: 20120101
+ * Release: 20130211
  *
  * License:
  *  http://javascript.nwbox.com/NWMatcher/MIT-LICENSE
@@ -15,13 +15,29 @@
  *  http://javascript.nwbox.com/NWMatcher/nwmatcher.js
  */
 
-(function(global) {
+(function(global, factory) {
 
-  var version = 'nwmatcher-1.2.5',
+  if (typeof module === 'object' && typeof exports === 'object') {
+    module.exports = function (browserGlobal) {
+      var exports = { };
+      factory(browserGlobal, exports);
+      return exports;
+    };
+  } else {
+    if (!global.NW) {
+      global.NW = { };
+    }
+    if (!global.NW.Dom) {
+      global.NW.Dom = { };
+    }
+    factory(global, global.NW.Dom);
+  }
 
-  Dom = typeof exports == 'object' ? exports :
-    ((global.NW || (global.NW = { })) &&
-    (global.NW.Dom || (global.NW.Dom = { }))),
+})(this, function(global, exports) {
+
+  var version = 'nwmatcher-1.3.1',
+
+  Dom = exports,
 
   doc = global.document,
   root = doc.documentElement,
@@ -45,7 +61,8 @@
   operators = '([~*^$|!]?={1})',
   whitespace = '[\\x20\\t\\n\\r\\f]*',
   combinators = '[\\x20]|[>+~][^>+~]',
-  pseudoparms = '[-+]?\\d*n?[-+]?\\d*',
+  pseudoparms = '(?:[-+]?\\d*n)?[-+]?\\d*',
+
   quotedvalue = '"[^"]*"' + "|'[^']*'",
   skipgroup = '\\[.*\\]|\\(.*\\)|\\{.*\\}',
 
@@ -53,8 +70,9 @@
   identifier = '(?:-?[_a-zA-Z]{1}[-\\w]*|[^\\x00-\\xa0]+|\\\\.+)+',
 
   attrcheck = '(' + quotedvalue + '|' + identifier + ')',
-  attributes = whitespace + '(' + encoding + '+:?' + encoding + '+)' +
+  attributes = whitespace + '(' + encoding + '*:?' + encoding + '+)' +
     whitespace + '(?:' + operators + whitespace + attrcheck + ')?' + whitespace,
+
   attrmatcher = attributes.replace(attrcheck, '([\\x22\\x27]*)((?:\\\\?.)*?)\\3'),
 
   pseudoclass = '((?:' +
@@ -75,7 +93,7 @@
     '|\\[' + attributes + '\\]' +
     '|\\(' + pseudoclass + '\\)' +
     '|\\{' + extensions + '\\}' +
-    '|,' +
+    '|(?:,|' + whitespace + ')' +
     ')+',
 
   extendedValidator = standardValidator.replace(pseudoclass, '.*'),
@@ -86,7 +104,7 @@
     whitespace + '|' + whitespace + '$', 'g'),
 
   reSplitGroup = RegExp('(' +
-    '[^,\\\\\\[\\]]+' +
+    '[^,\\\\()[\\]]+' +
     '|\\[[^[\\]]*\\]|\\[.*\\]' +
     '|\\([^()]+\\)|\\(.*\\)' +
     '|\\{[^{}]+\\}|\\{.*\\}' +
@@ -96,11 +114,22 @@
   reSplitToken = RegExp('(' +
     '\\[' + attributes + '\\]|' +
     '\\(' + pseudoclass + '\\)|' +
-    '[^\\x20>+~]|\\\\.)+', 'g'),
+    '\\\\.|[^\\x20\\t\\n\\r\\f>+~])+', 'g'),
 
   reWhiteSpace = /[\x20\t\n\r\f]+/g,
 
   reOptimizeSelector = RegExp(identifier + '|^$'),
+
+  ATTR_BOOLEAN = {
+    checked: 1, disabled: 1, ismap: 1,
+    multiple: 1, readonly: 1, selected: 1
+  },
+
+  ATTR_DEFAULT = {
+    value: 'defaultValue',
+    checked: 'defaultChecked',
+    selected: 'defaultSelected'
+  },
 
   ATTR_URIDATA = {
     action: 2, cite: 2, codebase: 2, data: 2, href: 2,
@@ -149,36 +178,35 @@
     'type': 1, 'xmlns': 1, 'xml:lang': 1, 'xml:space': 1
   },
 
-  REFLECTED = { 'value': 1, 'checked': 1, 'selected': 1 },
-
   TO_UPPER_CASE = IE_LT_9 ? '.toUpperCase()' : '',
 
-  ACCEPT_NODE = 'r[r.length]=c[k];if(f&&false===f(c[k]))break;else continue main;',
+  ACCEPT_NODE = 'r[r.length]=c[k];if(f&&false===f(c[k]))break main;else continue main;',
   REJECT_NODE = IE_LT_9 ? 'if(e.nodeName<"A")continue;' : '',
 
   Config = {
     CACHING: false,
     SIMPLENOT: true,
-    USE_HTML5: false,
-    USE_QSAPI: false,
+    UNIQUE_ID: true,
+    USE_HTML5: true,
     VERBOSITY: true
   },
 
   configure =
-    function(options) {
-      for (var i in options) {
-        Config[i] = !!options[i];
+    function(option) {
+      if (typeof option == 'string') { return Config[option]; }
+      if (typeof option != 'object') { return false; }
+      for (var i in option) {
+        Config[i] = !!option[i];
         if (i == 'SIMPLENOT') {
           matchContexts = { };
           matchResolvers = { };
           selectContexts = { };
           selectResolvers = { };
-          Config['USE_QSAPI'] = false;
-          reValidator = RegExp(extendedValidator, 'g');
-        } else if (i == 'USE_QSAPI') {
-          reValidator = RegExp(standardValidator, 'g');
         }
       }
+      reValidator = RegExp(Config.SIMPLENOT ?
+        standardValidator : extendedValidator, 'g');
+      return true;
     },
 
   concatCall =
@@ -192,19 +220,9 @@
 
   emit =
     function(message) {
-      message = 'SYNTAX_ERR: ' + message + ' ';
-      if (Config.VERBOSITY) {
-        if (typeof global.DOMException != 'undefined') {
-          throw { code: 12, message: message };
-        } else {
-          throw new Error(12, message);
-        }
-      } else {
-        if (global.console && global.console.log) {
-          global.console.log(message);
-        } else {
-          global.status += message;
-        }
+      if (Config.VERBOSITY) { throw Error(message); }
+      if (global.console && global.console.log) {
+        global.console.log(message);
       }
     },
 
@@ -220,7 +238,7 @@
           typeof doc.compatMode == 'string' ?
           doc.compatMode.indexOf('CSS') < 0 :
           (function() {
-            var style = document.createElement('div').style;
+            var style = doc.createElement('div').style;
             return style && (style.width = 1) && style.width == '1px';
           })();
 
@@ -242,13 +260,13 @@
 
   _byId = !('fileSize' in doc) ?
     function(id, from) {
-      id = id.replace(/\\/g, '');
+      id = id.replace(/\\([^\\]{1})/g, '$1');
       return from.getElementById && from.getElementById(id) ||
         byIdRaw(id, from.getElementsByTagName('*'));
     } :
     function(id, from) {
       var element = null;
-      id = id.replace(/\\/g, '');
+      id = id.replace(/\\([^\\]{1})/g, '$1');
       if (XML_DOCUMENT || from.nodeType != 9) {
         return byIdRaw(id, from.getElementsByTagName('*'));
       }
@@ -261,15 +279,36 @@
 
   byId =
     function(id, from) {
-      switchContext(from || (from = doc));
+      from || (from = doc);
+      if (lastContext !== from) { switchContext(from); }
       return _byId(id, from);
     },
 
-  getAttr =
+  getAttribute =
     function(node, attribute) {
+      attribute = attribute.toLowerCase();
+      if (typeof node[attribute] == 'object') {
+        return node.attributes[attribute] &&
+          node.attributes[attribute].value || '';
+      }
       return (
+        attribute == 'type' ? node.getAttribute(attribute) || '' :
         ATTR_URIDATA[attribute] ? node.getAttribute(attribute, 2) || '' :
-          ((node = node.attributes[attribute]) && node.value) || '');
+        ATTR_BOOLEAN[attribute] ? node.getAttribute(attribute) ? attribute : 'false' :
+          ((node = node.getAttributeNode(attribute)) && node.value) || '');
+    },
+
+  hasAttribute = root.hasAttribute ?
+    function(node, attribute) {
+        return node.hasAttribute(attribute);
+    } :
+    function(node, attribute) {
+      attribute = attribute.toLowerCase();
+      if (ATTR_DEFAULT[attribute]) {
+        return !!node[ATTR_DEFAULT[attribute]];
+      }
+      node = node.getAttributeNode(attribute);
+      return !!(node && node.specified);
     },
 
   compile =
@@ -280,27 +319,33 @@
       typeof source == 'string' || (source = '');
 
       if (parts.length == 1) {
-        source += compileSelector(parts[0], mode ? ACCEPT_NODE : 'f&&f(k);return true;');
+        source += compileSelector(parts[0], mode ? ACCEPT_NODE : 'f&&f(k);return true;', mode);
       } else {
         var i = -1, seen = { }, token;
         while ((token = parts[++i])) {
           token = token.replace(reTrimSpaces, '');
           if (!seen[token] && (seen[token] = true)) {
-            source += compileSelector(token, mode ? ACCEPT_NODE : 'f&&f(k);return true;');
+            source += compileSelector(token, mode ? ACCEPT_NODE : 'f&&f(k);return true;', mode);
           }
         }
       }
 
       if (mode)
-        return Function('c,s,r,d,h,g,f',
+        return Function('c,s,r,d,h,g,f,v',
           'var N,n,x=0,k=-1,e;main:while((e=c[++k])){' + source + '}return r;');
       else
-        return Function('e,s,r,d,h,g,f',
+        return Function('e,s,r,d,h,g,f,v',
           'var N,n,x=0,k=e;' + source + 'return false;');
     },
 
+  FILTER =
+    'var z=v[@]||(v[@]=[]),l=z.length-1;' +
+    'while(l>=0&&z[l]!==e)--l;' +
+    'if(l!==-1){break;}' +
+    'z[z.length]=e;',
+
   compileSelector =
-    function(selector, source) {
+    function(selector, source, mode) {
 
       var k = 0, expr, match, name, result, status, test, type;
 
@@ -314,8 +359,8 @@
 
         else if ((match = selector.match(Patterns.id))) {
           source = 'if(' + (XML_DOCUMENT ?
-            's.getAttr(e,"id")' :
-            '(e.submit?s.getAttr(e,"id"):e.id)') +
+            's.getAttribute(e,"id")' :
+            '(e.submit?s.getAttribute(e,"id"):e.id)') +
             '=="' + match[1] + '"' +
             '){' + source + '}';
         }
@@ -341,66 +386,66 @@
             emit('Unsupported operator in attribute selectors "' + selector + '"');
             return '';
           }
-          name = match[1].toLowerCase();
-          if (match[2] && match[4] && (type = Operators[match[2]])) {
-            test = name in INSENSITIVE_MAP;
-            match[4] = match[4].replace(/\\([0-9a-f]{2,2})/, '\\x$1');
-            type = type.replace(/\%m/g,  test ? match[4].toLowerCase() : match[4]);
-            expr = 'n=s.getAttr(e,"' + name + '")' + (test ? '.toLowerCase()' : '') + ';';
-          } else if (!match[2]) {
-            if (REFLECTED[name]) {
-              test = 'default' + name.charAt(0).toUpperCase() + name.slice(1);
-              expr = 'n=e["' + test + '"];';
-              type = 'n';
-            } else {
-              expr = 'n=e.attributes["' + name + '"];';
-              type = IE_LT_9 ? 'n&&n.specified' : 'n';
-            }
-          } else if (match[2] == '!=' || match[2] == '=') {
-            expr = 'n=e.attributes["' + name + '"];';
-            type = 'n&&n.value' + match[2] + '="' + match[4] + '"';
-          } else {
-            expr = '';
-            type = 'false';
+          test = 'false';
+          if (match[4]) {
+            type = INSENSITIVE_MAP[match[1].toLowerCase()];
+            match[4] =
+              (type ? match[4].toLowerCase() : match[4])
+              .replace(/\\([0-9a-f]{2,2})/g, '\\x$1')
+              .replace(/(\x22|\x27)/g, '\\$1');
           }
-          source = expr + 'if(' + type + '){' + source + '}';
+          if (match[2] && match[4] && (test = Operators[match[2]])) {
+            test = test.replace(/\%m/g, match[4]);
+          } else if (match[2] == '!=' || match[2] == '=') {
+            test = 'n' + match[2] + '="' + match[4] + '"';
+          }
+          expr = 'n=s.' + (match[2] ? 'get' : 'has') + 'Attribute(e,"' + match[1] + '")' + (type ? '.toLowerCase();' : ';');
+          source = expr + 'if(' + (match[2] ? test : 'n') + '){' + source + '}';
         }
 
         else if ((match = selector.match(Patterns.adjacent))) {
+          source = (mode ? '' : FILTER.replace(/@/g, k)) + source;
           source = 'var N' + k + '=e;while(e&&(e=e.previousSibling)){if(e.nodeName>"@"){' + source + 'break;}}e=N' + k + ';';
         }
 
         else if ((match = selector.match(Patterns.relative))) {
-          source = 'var N' + k + '=e;e=e.parentNode.firstChild;while(e&&e!=N' + k + '){if(e.nodeName>"@"){' + source + '}e=e.nextSibling;}e=N' + k + ';';
+          source = (mode ? '' : FILTER.replace(/@/g, k)) + source;
+          source = 'var N' + k + '=e;e=e.parentNode.firstChild;while(e&&e!==N' + k + '){if(e.nodeName>"@"){' + source + '}e=e.nextSibling;}e=N' + k + ';';
         }
 
         else if ((match = selector.match(Patterns.children))) {
-          source = 'var N' + k + '=e;if(e&&e!==h&&e!==g&&(e=e.parentNode)){' + source + '}e=N' + k + ';';
+          source = (mode ? '' : FILTER.replace(/@/g, k)) + source;
+          source = 'var N' + k + '=e;while(e&&e!==h&&e!==g&&(e=e.parentNode)){' + source + 'break;}e=N' + k + ';';
         }
 
         else if ((match = selector.match(Patterns.ancestor))) {
+          source = (mode ? '' : FILTER.replace(/@/g, k)) + source;
           source = 'var N' + k + '=e;while(e&&e!==h&&e!==g&&(e=e.parentNode)){' + source + '}e=N' + k + ';';
         }
 
         else {
+
           expr = false;
-          status = true;
+          status = false;
           for (expr in Selectors) {
             if ((match = selector.match(Selectors[expr].Expression)) && match[1]) {
               result = Selectors[expr].Callback(match, source);
               source = result.source;
               status = result.status;
-              if (status) break;
+              if (status) { break; }
             }
           }
+
           if (!status) {
             emit('Unknown pseudo-class selector "' + selector + '"');
             return '';
           }
+
           if (!expr) {
             emit('Unknown token in selector "' + selector + '"');
             return '';
           }
+
         }
 
         if (!match) {
@@ -422,7 +467,7 @@
       if (!(element && element.nodeName > '@')) {
         emit('Invalid element argument');
         return false;
-      } else if (!selector || typeof selector != 'string') {
+      } else if (typeof selector != 'string') {
         emit('Invalid selector argument');
         return false;
       } else if (lastContext !== from) {
@@ -449,7 +494,7 @@
         matchContexts[selector] = from;
       }
 
-      return matchResolvers[selector](element, Snapshot, [ ], doc, root, from, callback);
+      return matchResolvers[selector](element, Snapshot, [ ], doc, root, from, callback, { });
     },
 
   first =
@@ -463,15 +508,12 @@
       var i, changed, element, elements, parts, token, original = selector;
 
       if (arguments.length === 0) {
-        emit('Missing required selector parameters');
-        return [ ];
-      } else if (selector === '') {
-        emit('Empty selector string');
+        emit('Not enough arguments');
         return [ ];
       } else if (typeof selector != 'string') {
         return [ ];
       } else if (from && !(/1|9|11/).test(from.nodeType)) {
-        emit('Invalid context element');
+        emit('Invalid or illegal context element');
         return [ ];
       } else if (lastContext !== from) {
         switchContext(from || (from = doc));
@@ -509,7 +551,7 @@
           lastPosition = selector.length - token.length;
         }
 
-        if ((parts = lastSlice.match(Optimize.ID)) && (token = parts[1])) {
+        if (Config.UNIQUE_ID && (parts = lastSlice.match(Optimize.ID)) && (token = parts[1])) {
           if ((element = _byId(token, from))) {
             if (match(element, selector)) {
               callback && callback(element);
@@ -518,17 +560,14 @@
           }
         }
 
-        else if ((parts = selector.match(Optimize.ID)) && (token = parts[1])) {
+        else if (Config.UNIQUE_ID && (parts = selector.match(Optimize.ID)) && (token = parts[1])) {
           if ((element = _byId(token, doc))) {
             if ('#' + token == selector) {
               callback && callback(element);
               elements = [ element ];
-            }
-            if (/[>+~]/.test(selector)) {
+            } else if (/[>+~]/.test(selector)) {
               from = element.parentNode;
             } else {
-              selector = selector.replace('#' + token, '*');
-              lastPosition -= token.length + 1;
               from = element;
             }
           } else elements = [ ];
@@ -545,7 +584,7 @@
         }
 
         else if (!XML_DOCUMENT && GEBCN && (parts = lastSlice.match(Optimize.CLASS)) && (token = parts[1])) {
-          if ((elements = from.getElementsByClassName(token.replace(/\\/g, ''))).length === 0) return [ ];
+          if ((elements = from.getElementsByClassName(token.replace(/\\([^\\]{1})/g, '$1'))).length === 0) return [ ];
             selector = selector.slice(0, lastPosition) + selector.slice(lastPosition).replace('.' + token,
               reOptimizeSelector.test(selector.charAt(selector.indexOf(token) - 1)) ? '' : '*');
         }
@@ -566,12 +605,14 @@
         selectContexts[selector] = from;
       }
 
-      elements = selectResolvers[selector](elements, Snapshot, [ ], doc, root, from, callback);
+      elements = selectResolvers[selector](elements, Snapshot, [ ], doc, root, from, callback, { });
 
       Config.CACHING && Dom.saveResults(original, from, doc, elements);
 
       return elements;
     },
+
+  FN = function(x) { return x; },
 
   matchContexts = { },
   matchResolvers = { },
@@ -583,7 +624,8 @@
     byId: _byId,
     match: match,
     select: select,
-    getAttr: getAttr
+    getAttribute: getAttribute,
+    hasAttribute: hasAttribute
   };
 
   Tokens = {
@@ -611,16 +653,17 @@
   Dom.configure = configure;
 
   Dom.Config = Config;
+
   Dom.Operators = Operators;
   Dom.Selectors = Selectors;
+
   Dom.Snapshot = Snapshot;
   Dom.Tokens = Tokens;
 
-  Dom.setCache = function() { return; };
-  Dom.loadResults = function() { return; };
-  Dom.saveResults = function() { return; };
-
-  Dom.shortcuts = function(x) { return x; };
+  Dom.setCache = FN;
+  Dom.shortcuts = FN;
+  Dom.loadResults = FN;
+  Dom.saveResults = FN;
 
   Dom.registerOperator =
     function(symbol, resolver) {
@@ -637,4 +680,4 @@
 
   switchContext(doc, true);
 
-})(this);
+});

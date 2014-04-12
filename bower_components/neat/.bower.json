@@ -1,6 +1,6 @@
 {
   "name": "neat",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "homepage": "http://neat.bourbon.io/",
   "main": "app/assets/stylesheets/_neat.scss",
   "ignore": [
@@ -14,13 +14,16 @@
     "CONTRIBUTING.md",
     "NEWS.md"
   ],
-  "_release": "1.5.0",
+  "dependencies": {
+    "bourbon": ">=3.1"
+  },
+  "_release": "1.6.0",
   "_resolution": {
     "type": "version",
-    "tag": "v1.5.0",
-    "commit": "e41d2b88ed0219284ad7f813842c818b09906bde"
+    "tag": "v1.6.0",
+    "commit": "9a89e73fae9c6d0bcbcc1796b6c2f91be7e67e9b"
   },
   "_source": "git://github.com/thoughtbot/neat.git",
-  "_target": "~1.5.0",
+  "_target": "~1.6.0",
   "_originalSource": "neat"
 }

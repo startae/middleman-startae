@@ -63,12 +63,12 @@ if ( location.protocol != "file:" ) {
 }
 */
 test("broken", function() {
-	expect(6);
+	expect(13);
 	function broken(name, selector) {
 		try {
 			t(name, selector, [ ]);
 		} catch(e){
-			ok( typeof e === "object" && e.code == 12 || e.number == 12,
+			ok( /error/i.test(e.name),
 				name + ": " + selector );
 		}
 	}
@@ -79,8 +79,17 @@ test("broken", function() {
 	broken( "Broken Selector", "<", [] );
 	broken( "Broken Selector", "()", [] );
 	broken( "Broken Selector", "<>", [] );
-    // curly braces could be used in extensions
+	// curly braces could be used in extensions
 	//broken( "Broken Selector", "{}", [] );
+
+	broken( "Nth-child", ":nth-child(2n+-0)", [] );
+	broken( "Nth-child", ":nth-child(- 1n)", [] );
+	broken( "Nth-child", ":nth-child(-1 n)", [] );
+	broken( "First-child", ":first-child(n)", [] );
+	broken( "Last-child", ":last-child(n)", [] );
+	broken( "Only-child", ":only-child(n)", [] );
+	broken( "Nth-child", ":nth-child(2+0)", [] );
+
 });
 
 test("id", function() {
