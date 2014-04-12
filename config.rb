@@ -1,3 +1,7 @@
+# View Middleman configurations:
+# http://localhost:4567/__middleman/config/
+
+
 # Site Settings
 # ----------------------------------------------
 @analytics_account = false
@@ -22,12 +26,11 @@ activate :i18n, :mount_at_root => :'pt-BR'
 
 # Livereload
 # ----------------------------------------------
-activate :livereload
+set :livereload, true
 
 
 # Page options, layouts, aliases and proxies
 # ----------------------------------------------
-
 
 
 # Helpers
@@ -86,37 +89,36 @@ helpers do
 end
 
 
-
-# Other configurations
+# Bower Config
 # ----------------------------------------------
-# Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
-activate :directory_indexes
-
-
-# Bower config
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
 
 
-
 # Configure assets directories
 # ----------------------------------------------
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
-set :fonts_dir, 'assets/fonts'
+config[:css_dir] = 'assets/stylesheets'
+config[:js_dir] = 'assets/javascripts'
+config[:images_dir] = 'assets/images'
+config[:fonts_dir] = 'assets/fonts'
+config[:partials_dir] = 'partials'
 
+
+# Other configurations
+# ----------------------------------------------
+set :automatic_image_sizes, false
+set :automatic_alt_tags, true
+set :directory_indexes, true
 
 
 # Development-specific configuration
 # ----------------------------------------------
 configure :development do
-  activate :relative_assets
+  set :directory_indexes, true
+  set :debug_assets, true
 end
-
 
 
 # Build-specific configuration
@@ -124,25 +126,24 @@ end
 configure :build do
 
   # Use relative URLs
-  activate :relative_assets
+  set :directory_indexes, true
 
   # Activate gzip
-  activate :gzip
+  set :gzip, true
 
   # Minify CSS on build
-  activate :minify_css
+  set :minify_css, true
 
   # Minify Javascript on build
-  activate :minify_javascript
+  set :minify_javascript, true
 
   # Add asset fingerprinting to avoid cache issues
-  activate :asset_hash
+  set :asset_hash, true
 
   # Enable cache buster
-  # activate :cache_buster
+  set :cache_buster, true
 
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
+  # Compress PNGs after build (First: gem install middleman-smusher)
   # require "middleman-smusher"
-  # activate :smusher
+  # set :smusher, true
 end
