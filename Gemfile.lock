@@ -153,5 +153,6 @@ DEPENDENCIES
   middleman-smusher (~> 3.0.0)
   sass (~> 3.3.4)
   slim (~> 2.0.2)
+  tzinfo-data
   unicorn (~> 4.8.2)
   wdm (~> 0.1.0)
