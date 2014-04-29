@@ -9,7 +9,13 @@
 
 # Slim HTML
 # ----------------------------------------------
-Slim::Engine.set_default_options pretty: true, sort_attrs: false, format: :html5, tabsize: 2
+set :slim, {
+  :format  => :html5,
+  :tabsize => 2,
+  :pretty => true,
+  :sort_attrs => false
+}
+::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
 
 
 # Compass configuration
@@ -111,6 +117,7 @@ config[:partials_dir] = 'partials'
 set :automatic_image_sizes, false
 set :automatic_alt_tags, true
 set :directory_indexes, true
+set :trailing_slash, false
 
 
 # Development-specific configuration
