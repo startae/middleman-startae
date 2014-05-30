@@ -1,0 +1,31 @@
+// simple function to find the context of a nested percentage.
+@function nested-context($contexts: null) {
+  $contexts: if($contexts != null, $contexts, toolkit-get('nested context contexts'));
+
+  // First level deep is always 100%
+  $percentage: 100%;
+
+  // Loop through each level
+  @each $context in $contexts {
+    // Invert the percentage to find context
+    $percentage: percentage($percentage / $context);
+  }
+  // Return final percentage
+  @return $percentage;
+}
+
+// mixin to make things easier
+@mixin nested-context($contexts: null, $position: null) {
+  $contexts: if($contexts != null, $contexts, toolkit-get('nested context contexts'));
+  $position: if($position != null, $position, toolkit-get('nested context position'));
+
+  width: nested-context($contexts);
+  @if $position == "center" {
+    position: relative;
+    left: 50%;
+    margin-left: nested-context($contexts) * -.5;
+  }
+  @if $position == "right" {
+    margin-left: nested-context($contexts) * -1 + 100%;
+  }
+}

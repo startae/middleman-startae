@@ -1,0 +1,22 @@
+{
+  "name": "picturefill",
+  "repo": "scottjehl/picturefill",
+  "description": "A Polyfill for the HTML Picture Element (http://picture.responsiveimages.org/) that you can use today.",
+  "version": "2.0.0",
+  "main": "picturefill.js",
+  "scripts": [
+    "dist/picturefill.js"
+  ],
+  "licence": "MIT",
+  "homepage": "https://github.com/scottjehl/picturefill",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "61550f8c67f87600f849f268454ee951283d8b55"
+  },
+  "_source": "git://github.com/scottjehl/picturefill.git",
+  "_target": "~2.0.0",
+  "_originalSource": "picturefill",
+  "_direct": true
+}

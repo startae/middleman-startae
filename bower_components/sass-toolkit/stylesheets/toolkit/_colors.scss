@@ -1,0 +1,175 @@
+//////////////////////////////
+// Compass Extension Imports
+//////////////////////////////
+
+//////////////////////////////
+// Tint and Shade
+//////////////////////////////
+@function tint($color, $amount) {
+  @return mix(toolkit-get('tint color'), $color, $amount);
+}
+
+@function shade($color, $amount) {
+  @return mix(toolkit-get('shade color'), $color, $amount);
+}
+
+//////////////////////////////
+// Luma
+//////////////////////////////
+@function luma($color) {
+  @return (red($color) * .299) + (green($color) * .587) + (blue($color) * .114);
+}
+
+@function luma-gte($color1, $color2) {
+  @if luma($color1) >= luma($color2) {
+    @return true;
+  }
+  @else {
+    @return false;
+  }
+}
+
+@function luma-lte($color1, $color2) {
+  @if luma($color1) <= luma($color2) {
+    @return true;
+  }
+  @else {
+    @return false;
+  }
+}
+
+@function luma-diff($color1, $color2) {
+  @return luma($color1) - luma($color2);
+}
+
+//////////////////////////////
+// Color Stacks
+//////////////////////////////
+@function color-stack($main, $secondary, $amounts...) {
+  @if length($amounts) == 0 {
+    $amounts: toolkit-get('color stack amounts');
+  }
+  @else if length($amounts) == 1 {
+    $amounts: nth($amounts, 1);
+  }
+
+  $stack: $main;
+
+  @each $amount in $amounts {
+    $stack: join($stack, mix($secondary, nth($stack, 1), $amount));
+  }
+
+  @return $stack;
+}
+
+// Tint Stack
+@function tint-stack($color, $amounts...) {
+  @if length($amounts) > 0 {
+    @return color-stack($color, toolkit-get('tint color'), $amounts);
+  }
+  @else {
+    @return color-stack($color, toolkit-get('tint color'));
+  }
+}
+
+// Shade Stack
+@function shade-stack($color, $amounts...) {
+  @if length($amounts) > 0 {
+    @return color-stack($color, toolkit-get('shade color'), $amounts);
+  }
+  @else {
+    @return color-stack($color, toolkit-get('shade color'));
+  }
+}
+
+// Tint/Shade Stack
+@function tint-shade-stack($color, $amounts...) {
+  $colors: ();
+  @if length($amounts) == 0 {
+    $amounts: toolkit-get('tint shade amounts');
+  }
+  $length: length($amounts);
+
+  // Shades
+  @for $i from 1 through $length {
+    $colors: append($colors, shade($color, nth($amounts, $i)));
+  }
+
+  // Base
+  $colors: append($colors, $color);
+
+  // Tints
+  @for $i from 0 through $length - 1 {
+    $colors: append($colors, tint($color, nth($amounts, $length - $i)));
+  }
+
+  @return $colors;
+}
+
+//////////////////////////////
+// Color Scales
+//////////////////////////////
+@function color-scale($main, $secondary, $steps: null) {
+  $steps: if($steps != null, $steps, toolkit-get('color scale steps'));;
+
+  $list: $main;
+
+  $red1: red($main);
+  $red2: red($secondary);
+  $red-diff: (($red1 - $red2) / (($steps - 1)));
+
+  $hue1: hue($main);
+  $hue2: hue($secondary);
+  @if ($hue2 + 359 - $hue1) < abs($hue1 - $hue2) {
+    $hue2: $hue2 + 359;
+  }
+  $hue-diff: ($hue2 - $hue1) / ($steps - 1);
+
+  $sat1: saturation($main);
+  $sat2: saturation($secondary);
+  $sat-diff: 0;
+  @if $sat1 > $sat2 {
+    $sat-diff: ($sat2 - $sat1) / ($steps - 1);
+  }
+  @else {
+    $sat-diff: ($sat1 - $sat2) / ($steps - 1);
+  }
+
+  $lte1: lightness($main);
+  $lte2: lightness($secondary);
+  $lte-diff: 0;
+  @if $lte1 > $lte2 {
+    $lte-diff: ($lte2 - $lte1) / ($steps - 1);
+  }
+  @else {
+    $lte-diff: ($lte1 - $lte2) / ($steps - 1);
+  }
+
+  $alp1: alpha($main);
+  $alp2: alpha($secondary);
+  $alp-diff: 0;
+  @if $alp1 > $alp2 {
+    $alp-diff: ($alp2 - $alp1) / ($steps - 1);
+  }
+  @else {
+    $alp-diff: ($alp1 - $alp2) / ($steps - 1);
+  }
+
+  $hue-hold: $hue1;
+  $sat-hold: $sat1;
+  $lte-hold: $lte1;
+  $alp-hold: $alp1;
+  $color-hold: 0;
+
+  @for $i from 2 through $steps {
+    $hue-hold: $hue-hold + $hue-diff;
+    $sat-hold: $sat-hold + $sat-diff;
+    $lte-hold: $lte-hold + $lte-diff;
+    $alp-hold: $alp-hold + $alp-diff;
+
+    $color-hold: hsla($hue-hold, $sat-hold, $lte-hold, $alp-hold);
+    $list: append($list, $color-hold);
+  }
+
+  @return $list;
+}
