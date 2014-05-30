@@ -3,6 +3,9 @@
 <br>
 [![Gem Version](https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon) [![Code Climate](https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon)  [![Gitter chat](https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon)
 
+-
+:warning: Bourbon **4.0.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use Bourbon **3.2.x**.
+
 ## A lightweight mixin library for Sass
 Bourbon is a library of pure sass mixins that are designed to be simple
 and easy to use. No configuration required.
@@ -13,10 +16,12 @@ The mixins contain vendor specific prefixes for all CSS3 properties for support
 amongst modern browsers. The prefixes also ensure graceful degradation for older
 browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
 
+
+
 ### [Documentation & Demo](http://bourbon.io)
 
 ### Requirements
-Sass 3.2+
+Sass 3.3+
 
 ### Install for Rails 3.1+
 In your Gemfile:
@@ -81,7 +86,7 @@ Visit the [Command line tools wiki](https://github.com/thoughtbot/bourbon/wiki/C
 ##### [Bourbon v2.x install instructions](https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install)
 
 
-- [Changelog](https://github.com/thoughtbot/bourbon/wiki)
+- [Changelog](https://github.com/thoughtbot/bourbon/releases)
 - [Browser support](https://github.com/thoughtbot/bourbon/wiki/Browser-Support)
 
 ### Chat with us

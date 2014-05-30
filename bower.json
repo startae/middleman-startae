@@ -1,15 +1,15 @@
 {
   "name": "middleman-startae",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": "true",
   "authors": [
     "Startaê <http://www.startae.com.br>",
     "Renato Carvalho <renatolz@gmail.com>"
   ],
   "dependencies": {
-    "html5shiv": "~3.7.0",
+    "html5shiv": "~3.7.2",
     "selectivizr": "~1.0.2",
-    "bourbon": "~4.0.0-rc.2",
+    "bourbon": "~4.0.2",
     "neat": "~1.6.0",
     "nwmatcher": "~1.3.1",
     "zepto": "~1.1.3"
