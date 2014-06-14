@@ -18,13 +18,6 @@ set :slim, {
 ::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
 
 
-# Compass configuration
-compass_config do |config|
-  config.output_style = :expanded
-  config.preferred_syntax = :sass
-end
-
-
 # i18n
 # ----------------------------------------------
 activate :i18n, :mount_at_root => :'pt-BR'
