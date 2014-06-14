@@ -18,13 +18,6 @@ set :slim, {
 ::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
 
 
-# Compass configuration
-compass_config do |config|
-  config.output_style = :expanded
-  config.preferred_syntax = :sass
-end
-
-
 # i18n
 # ----------------------------------------------
 activate :i18n, :mount_at_root => :'pt-BR'
@@ -109,7 +102,7 @@ config[:css_dir] = 'assets/stylesheets'
 config[:js_dir] = 'assets/javascripts'
 config[:images_dir] = 'assets/images'
 config[:fonts_dir] = 'assets/fonts'
-config[:partials_dir] = 'partials'
+config[:partials_dir] = 'shared'
 
 
 # Other configurations
@@ -131,6 +124,7 @@ end
 # Build-specific configuration
 # ----------------------------------------------
 configure :build do
+  ignore "/bower_components/*"
 
   # Use relative URLs
   set :directory_indexes, true
