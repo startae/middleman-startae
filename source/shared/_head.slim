@@ -10,7 +10,7 @@ head
   meta content='320' name='MobileOptimized'
   meta content='initial-scale=1, user-scalable=yes, width=device-width' name='viewport'
   link rel='shortcut icon' href='#{image_path('favicon.png')}'
-  == stylesheet_link_tag 'application.css', media: 'all'
+  = stylesheet_link_tag 'application.css', media: 'all'
   /[if lt IE 9]
-    == javascript_include_tag 'ie-lt-9'
-  == yield_content :head
+    = javascript_include_tag 'ie-lt-9'
+  = yield_content :head
