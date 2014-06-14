@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/middleman/middleman.git
-  revision: 430521be83aea7ead55c3852cd47c26b0bc2f1df
+  revision: a35a38dd5f66becd5323cbb4ccad8ae195d14443
   branch: v3-stable
   specs:
     middleman (3.3.3)
@@ -58,7 +58,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    execjs (2.1.0)
+    execjs (2.2.0)
     faker (1.3.0)
       i18n (~> 0.5)
     ffi (1.9.3)
@@ -68,7 +68,7 @@ GEM
     hooks (0.4.0)
       uber (~> 0.0.4)
     http_parser.rb (0.6.0)
-    httpclient (2.3.4.1)
+    httpclient (2.4.0)
     i18n (0.6.9)
     json (1.8.1)
     kgio (2.9.2)
@@ -105,11 +105,11 @@ GEM
     raindrops (0.13.0)
     rake (10.3.2)
     rb-fsevent (0.9.4)
-    rb-inotify (0.9.4)
+    rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rb-kqueue (0.2.2)
+    rb-kqueue (0.2.3)
       ffi (>= 0.5.0)
-    sass (3.3.7)
+    sass (3.3.8)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -131,10 +131,10 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    tzinfo (1.2.0)
+    tzinfo (1.2.1)
       thread_safe (~> 0.1)
     uber (0.0.6)
-    uglifier (2.5.0)
+    uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.8.3)
@@ -152,7 +152,7 @@ DEPENDENCIES
   middleman!
   middleman-livereload (~> 3.3.3)
   middleman-smusher (~> 3.0.0)
-  sass (~> 3.3.7)
+  sass (~> 3.3.8)
   slim (~> 2.0.2)
   tzinfo-data
   unicorn (~> 4.8.3)
