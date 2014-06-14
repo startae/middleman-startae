@@ -12,7 +12,6 @@
 set :slim, {
   :format  => :html5,
   :tabsize => 2,
-  :pretty => true,
   :sort_attrs => false
 }
 ::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
@@ -25,7 +24,7 @@ activate :i18n, :mount_at_root => :'pt-BR'
 
 # Livereload
 # ----------------------------------------------
-set :livereload, true
+activate :livereload
 
 
 # Page options, layouts, aliases and proxies
@@ -107,17 +106,20 @@ config[:partials_dir] = 'shared'
 
 # Other configurations
 # ----------------------------------------------
-set :automatic_image_sizes, false
-set :automatic_alt_tags, true
-set :directory_indexes, true
+activate :directory_indexes
 set :trailing_slash, false
+activate :automatic_alt_tags
+
 
 
 # Development-specific configuration
 # ----------------------------------------------
 configure :development do
-  set :directory_indexes, true
-  set :debug_assets, true
+  activate :directory_indexes
+  activate :debug_assets
+  set :slim, {
+    :pretty => true
+  }
 end
 
 
@@ -127,24 +129,24 @@ configure :build do
   ignore "/bower_components/*"
 
   # Use relative URLs
-  set :directory_indexes, true
+  activate :directory_indexes
 
   # Activate gzip
-  set :gzip, true
+  activate :gzip
 
   # Minify CSS on build
-  set :minify_css, true
+  activate :minify_css
 
   # Minify Javascript on build
-  set :minify_javascript, true
+  activate :minify_javascript
 
   # Add asset fingerprinting to avoid cache issues
-  set :asset_hash, true
+  activate :asset_hash
 
   # Enable cache buster
-  set :cache_buster, true
+  activate :cache_buster
 
   # Compress PNGs after build (First: gem install middleman-smusher)
   # require "middleman-smusher"
-  # set :smusher, true
+  # activate :smusher
 end
