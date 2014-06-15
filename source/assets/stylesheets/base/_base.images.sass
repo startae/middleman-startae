@@ -1,31 +1,26 @@
-@charset "utf-8"
 // ******************************************************************
 //
-//   #application
+//   #base.images
 //
 // ******************************************************************
 
+
 // ------------------------------------------------------------------
-//   IMPORTS: Basic project imports (Keep the order of imports)
-//   1. Requirements: Vendor libraries
-//   2. Settings - Project settings
-//   3. Generic: Generic elements styles
-//   4. Base: Specific basic elements styles
+//   1. Remove gap under images.
+//   2. Fluid images for responsive purposes.
+//   3. Offset `alt` text from surrounding copy.
 // ------------------------------------------------------------------
-
-// [1]
-@import "requirements"
-
-// [2]
-@import "settings"
-
-// [3]
-@import "generic"
-
-// [4]
-@import "base"
+img
+  display: inline-block // [1]
+  vertical-align: middle // [1]
+  max-width: 100% // [2]
+  font-style: italic // [3]
 
 
 // ------------------------------------------------------------------
-//   Inbox
+//   If a `width` and/or `height` attribute have been explicitly
+//   defined, let’s not make the image fluid.
 // ------------------------------------------------------------------
+img[width],
+img[height]
+  max-width: none
