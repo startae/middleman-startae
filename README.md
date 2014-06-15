@@ -1,34 +1,16 @@
-# Startaê Middleman Project Template
-------
+# Middleman with Slim, Sass, Bourbon, Susy, Bower, Zepto and more
 
-It comes with Slim, Sass, Coffee and several other cool stuff that will help you get started quickly.
+This is a template for [Middleman](http://middlemanapp.com) featuring:
 
-
-## Basics
-Just your basic blank slate of a [Middleman](http://middlemanapp.com/) --rack project.
-
-
-## Usage
-
-```bash
-git clone git://github.com/startae/middleman-startae.git
-mkdir ~/.middleman/
-mv middleman-startae ~/.middleman/
-```
-Then:
-
-```bash
-middleman init my-new-project --template=middleman-startae
-```
-
-## Features
-
-* Livereload
 * Ready to run on Heroku
-* Slim
-* Sass
-* Coffeescript
-* Bower
+* [Livereload](http://livereload.com "Livereload - a happy land where browsers don't need a Refresh button")
+* [Slim](http://slim-lang.com "A lightweight templating engine")
+* [Bower](http://bower.io "BOWER: A package manager for the web")
+* [Zepto](http://zeptojs.com "Zepto - a minimalist JavaScript library for modern browsers")
+* [Sass](http://sass-lang.com "Sass: Syntactically Awesome Style Sheets")
+* [Bourbon](http://bourbon.io "Bourbon - A Sass Mixin Library")
+* [Neat](http://susy.oddbird.net "Susy - Responsive layout toolkit for Sass")
+* [Coffeescript](http://coffeescript.org "CoffeeScript")
 * Language configuration
 * Gzip
 * Faker (Fake content generator with several helpers predefined)
@@ -37,9 +19,17 @@ middleman init my-new-project --template=middleman-startae
 * Metatags helper
 
 
+## Installation
+
+1. Download or clone this repository to:
+  `git clone git://github.com/startae/middleman-startae.git ~/.middleman/middleman-startae`
+2. Create your new Middleman project with: `middleman init my_new_project --template=middleman-startae`
+3. Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower npm package installed: `npm install -g bower`)
+
+
 ## Comments & Suggestions?
 
-Just submit an [issue](https://github.com/startae/middleman-startae/issues). Thanks!
+Just submit an [issue](https://github.com/startae/middleman-startae/issues). Cheers!
 
 
 For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/).
