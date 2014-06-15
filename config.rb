@@ -24,7 +24,7 @@ activate :i18n, :mount_at_root => :'pt-BR'
 
 # Livereload
 # ----------------------------------------------
-activate :livereload
+activate :livereload, :no_swf => true
 
 
 # Page options, layouts, aliases and proxies
@@ -106,7 +106,6 @@ config[:partials_dir] = 'shared'
 
 # Other configurations
 # ----------------------------------------------
-activate :directory_indexes
 set :trailing_slash, false
 activate :automatic_alt_tags
 
@@ -116,7 +115,7 @@ activate :automatic_alt_tags
 # ----------------------------------------------
 configure :development do
   activate :directory_indexes
-  activate :debug_assets
+  set :debug_assets, true
   set :slim, {
     :pretty => true
   }
