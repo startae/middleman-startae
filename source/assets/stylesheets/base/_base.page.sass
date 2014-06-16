@@ -12,8 +12,8 @@
 //   2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
 //      navigating between pages that do/do not have enough content to produce
 //      scrollbars naturally.
-//   3. Ensure the page always fills at least the entire height of the viewport.
-//   4. Prevent text size adjust after orientation change, without disabling user zoom.
+//   3. Prevent text size adjust after orientation change, without disabling user zoom.
+//   4. Ensure the page always fills at least the entire height of the viewport.
 // ------------------------------------------------------------------
 html
   font-size: $base-font-size // [1]
@@ -21,7 +21,9 @@ html
   background-color: $base-background-color
   color: $base-font-color
   overflow-y: scroll // [2]
-  min-height: 100% // [3]
-  -webkit-text-size-adjust: 100% // [4]
-  -ms-text-size-adjust: 100% // [4]
-  text-size-adjust: 100% // [4]
+  -webkit-text-size-adjust: 100% // [3]
+  -ms-text-size-adjust: 100% // [3]
+  text-size-adjust: 100% // [3]
+
+html, body
+  min-height: 100% // [4]
