@@ -18,6 +18,7 @@ Think of Toolkit as your swiss army knife for Progressive Enhancement and Respon
   * [Luma](#luma)
   * [Color Stacks](#color-stacks)
   * [Color Scales](#color-scales)
+1. [DRY Mixins](#dry-mixins)
 1. [Font Helpers](#font-helpers)
   * [Enable Ligatures](#enable-ligatures)
   * [Font Face](#font-face)
@@ -175,6 +176,11 @@ Color scales allow you to step from one color to another in even steps. Color sc
 
 - `'color scale steps': 6`
 
+## DRY Mixins
+
+The pattern that inspired the [A List Apart](http://alistapart.com/) article [DRY-ing Out Your Sass Mixins](http://alistapart.com/article/dry-ing-out-your-sass-mixins), now availbale for you to use in your projects! The full writeup on the why can be found in the article, and examples can be found all throughout Toolkit.
+
+#### @include dynamic-extend($id) { @content }
 
 ## Font Helpers
 
@@ -215,7 +221,7 @@ A mixin for applying a core set of styling for icon fonts, based on styling form
 
 ### Content Fade In
 
-One of the big challenges of working with webfonts is the Flash of Unstyled Text. It happens when webfonts get applied after content is already rendered on the page, usually causing a jarring jump when they are. To help combat this, Google and Typekit teamed up to create [WebFont Loader](https://developers.google.com/fonts/docs/webfont_loader), a JavaScript library to add Font Events that you can hook in to using CSS and JavaScript to know whether your webfonts are loading, have successfully loaded, or have failed to load. As [Typekit](http://help.typekit.com/customer/portal/articles/6852) suggests, these can be utilized to more effectively take control over your staying and prevent FOUT. The `content-fade-in` mixin will set your content to a 0 opacity (allowing the page to paint correctly even while it's not visible) and when a loading class has been removed, will fade your content in to an opacity of 1. Y
+One of the big challenges of working with webfonts is the Flash of Unstyled Text. It happens when webfonts get applied after content is already rendered on the page, usually causing a jarring jump when they are. To help combat this, Google and Typekit teamed up to create [WebFont Loader](https://developers.google.com/fonts/docs/webfont_loader), a JavaScript library to add Font Events that you can hook in to using CSS and JavaScript to know whether your webfonts are loading, have successfully loaded, or have failed to load. As [Typekit](http://help.typekit.com/customer/portal/articles/6852) suggests, these can be utilized to more effectively take control over your staying and prevent FOUT. The `content-fade-in` mixin will set your content to a 0 opacity (allowing the page to paint correctly even while it's not visible) and when a loading class has been removed, will fade your content in to an opacity of 1.
 
 #### @include content-fade-in([$duration, $loading, $extend])
 
@@ -251,7 +257,7 @@ What is an intrinsic ratio you may ask? Well Thierry Koblentz wrote a great [A L
 
 ## Kickstart
 
-Importing the kickstart mixin will add the following common styles to your project:
+Importing the kickstart partial with `@import "toolkit/kickstart";` will add the following common styles to your project:
 
 ```scss
 *, *:before, *:after {
@@ -267,7 +273,7 @@ img, video {
 
 ## Nested Context
 
-Sometimes we may be inside of an element but need somthing the width of its parent.
+Sometimes we may be inside of an element but need something the width of its parent.
 
 ![Basic nested context](http://img.pgdn.us/nested-context.png)
 
