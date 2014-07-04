@@ -23,8 +23,11 @@ activate :i18n, :mount_at_root => :'pt-BR'
 
 
 # Livereload
+# Reload the browser automatically whenever files change
 # ----------------------------------------------
-activate :livereload, :no_swf => true
+configure :development do
+  activate :livereload, :no_swf => true
+end
 
 
 # Page options, layouts, aliases and proxies
