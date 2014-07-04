@@ -1,7 +1,7 @@
 {
   "name": "sass-toolkit",
   "description": "Toolkit full of bits and bobs of awesome aimed at assisting in advanced styling with Sass",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "main": "compass/stylesheets/_toolkit.scss",
   "ignore": [
     "**/.*",
@@ -18,13 +18,14 @@
   ],
   "dependencies": {},
   "homepage": "https://github.com/Team-Sass/toolkit",
-  "_release": "2.4.0",
+  "_release": "2.5.0",
   "_resolution": {
     "type": "version",
-    "tag": "v2.4.0",
-    "commit": "ee8c05227b8af8b5ec06a95ddb2df6538ae0cf85"
+    "tag": "v2.5.0",
+    "commit": "296d52812c8136c4800121c6d5579b5c883a90f7"
   },
   "_source": "git://github.com/Team-Sass/toolkit.git",
-  "_target": "~2.4.0",
-  "_originalSource": "sass-toolkit"
+  "_target": "~2.5.0",
+  "_originalSource": "sass-toolkit",
+  "_direct": true
 }
