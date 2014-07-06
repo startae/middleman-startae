@@ -27,6 +27,12 @@ This is a template for [Middleman](http://middlemanapp.com) featuring:
 3. Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower npm package installed: `npm install -g bower`)
 
 
+## Build & Dependency Status
+
+[![Dependency Status](http://img.shields.io/gemnasium/startae/middleman-startae.svg?style=flat)](https://gemnasium.com/startae/middleman-startae)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/)
+
+
 ## Comments & Suggestions?
 
 Just submit an [issue](https://github.com/startae/middleman-startae/issues). Cheers!
