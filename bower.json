@@ -17,7 +17,6 @@
     "picturefill": "~2.1.0-beta",
     "fastclick": "~1.0.2",
     "enquire": "~2.1.1",
-    "modernizr": "~2.8.3",
     "jquery": "~2.1.1"
   }
 }
