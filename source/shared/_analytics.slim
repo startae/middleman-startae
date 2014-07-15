@@ -1,7 +1,7 @@
-- if @analytics_account
+- if @google_analytics.present?
   javascript:
     var _gaq = _gaq || [];
-    _gaq.push(["_setAccount", "<%=@analytics_account%>"]);
+    _gaq.push(["_setAccount", "#{@google_analytics}"]);
     _gaq.push(["_trackPageview"]);
 
     (function() {

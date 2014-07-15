@@ -4,7 +4,7 @@
 
 # Site Settings
 # ----------------------------------------------
-@analytics_account = false
+@google_analytics = ''
 
 
 # Slim HTML
