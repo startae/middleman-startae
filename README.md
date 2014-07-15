@@ -1,15 +1,17 @@
-# Middleman with Slim, Sass, Bourbon, Susy, Bower, Zepto and more
+## Middleman with Slim, Sass, Bourbon, Susy, Bower, jQuery and more
 
-This is a template for [Middleman](http://middlemanapp.com) featuring:
+This is a base [Middleman](http://middlemanapp.com) template application. This sets all of the defaults that I'll generally set when building a new application on Middleman. Be sure to read all of the documentation to become familiar with Middleman before using this base setup.
+
+Features:
 
 * Ready to run on Heroku
 * [Livereload](http://livereload.com "Livereload - a happy land where browsers don't need a Refresh button")
 * [Slim](http://slim-lang.com "A lightweight templating engine")
 * [Bower](http://bower.io "BOWER: A package manager for the web")
-* [Zepto](http://zeptojs.com "Zepto - a minimalist JavaScript library for modern browsers")
+* [jQuery](http://jquery.com "jQuery is a fast, small, and feature-rich JavaScript library")
 * [Sass](http://sass-lang.com "Sass: Syntactically Awesome Style Sheets")
 * [Bourbon](http://bourbon.io "Bourbon - A Sass Mixin Library")
-* [Neat](http://susy.oddbird.net "Susy - Responsive layout toolkit for Sass")
+* [Susy](http://susy.oddbird.net "Susy - Responsive layout toolkit for Sass")
 * [Coffeescript](http://coffeescript.org "CoffeeScript")
 * Language configuration
 * Gzip
@@ -41,6 +43,3 @@ Just submit an [issue](https://github.com/startae/middleman-startae/issues). Che
 For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/).
 
 [Middleman](http://middlemanapp.com/) is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.
-
-
-
