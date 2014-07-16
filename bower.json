@@ -1,6 +1,6 @@
 {
   "name": "middleman-startae",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "private": "true",
   "authors": [
     "Startaê <http://www.startae.com.br>",
@@ -10,7 +10,7 @@
     "normalize-css": "~3.0.1",
     "bourbon": "~4.0.2",
     "susy": "~2.1.2",
-    "picturefill": "~2.1.0-beta",
+    "picturefill": "~2.1.0-beta2",
     "fastclick": "~1.0.2",
     "enquire": "~2.1.1",
     "jquery": "~2.1.1"
