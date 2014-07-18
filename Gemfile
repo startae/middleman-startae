@@ -21,4 +21,4 @@ gem 'compass', '~> 1.0.0.alpha.20' # Using compass temporarily so we can have sa
 gem 'coffee-script', '~> 2.2.0'
 
 # Generate fake data
-gem 'faker', '~> 1.4.1'
+gem 'faker', '~> 1.4.2'
