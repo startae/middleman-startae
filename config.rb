@@ -9,11 +9,7 @@
 
 # Slim HTML
 # ----------------------------------------------
-set :slim, {
-  :format  => :html5,
-  :tabsize => 2,
-  :sort_attrs => false
-}
+::Slim::Engine.set_default_options :format  => :html5
 ::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
 
 
@@ -120,9 +116,7 @@ activate :automatic_alt_tags
 configure :development do
   activate :directory_indexes
   set :debug_assets, true
-  set :slim, {
-    :pretty => true
-  }
+  ::Slim::Engine.set_default_options :pretty => true
 end
 
 
