@@ -10,7 +10,7 @@
     "normalize-css": "~3.0.1",
     "bourbon": "~4.0.2",
     "susy": "~2.1.3",
-    "fastclick": "~1.0.2",
+    "fastclick": "~1.0.3",
     "enquire": "~2.1.1",
     "jquery": "~2.1.1",
     "picturefill": "~2.1.0"
