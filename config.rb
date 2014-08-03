@@ -107,8 +107,6 @@ config[:partials_dir] = 'shared'
 # Other configurations
 # ----------------------------------------------
 set :trailing_slash, false
-activate :automatic_alt_tags
-
 
 
 # Development-specific configuration
