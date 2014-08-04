@@ -1,0 +1,29 @@
+{
+  "name": "inuit-shared",
+  "version": "0.1.3",
+  "homepage": "https://github.com/inuitcss/generic.shared",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "A small selection of shared styles used in the inuitcss framework",
+  "main": "_generic.shared.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "inuit-defaults": "~0.2.0"
+  },
+  "_release": "0.1.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.3",
+    "commit": "39150c0f96a4af3f1383a22ec9fa30cefb7d7073"
+  },
+  "_source": "git://github.com/inuitcss/generic.shared.git",
+  "_target": "~0.1.3",
+  "_originalSource": "inuit-shared",
+  "_direct": true
+}

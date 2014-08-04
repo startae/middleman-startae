@@ -1,0 +1,54 @@
+// **************************************
+//
+//   #tools.intrinsic-ratio
+//   Fluid Embeds and whatever WITH NO JAVASCIPT!
+//
+// **************************************
+
+
+$intrinsic-ratio: 16 / 9 !default
+$intrinsic-ratio-width: 100% !default
+$intrinsic-ratio-elements: "> *" !default
+$intrinsic-ratio-extend: true !default
+$intrinsic-ratio-direction: top !default
+
+=intrinsic-ratio-parent($extend: $intrinsic-ratio-extend)
+  @if $extend
+    @extend %intrinsic-ratio-parent
+  @else
+    position: relative
+    height: 0
+
+=intrinsic-ratio-child($extend: $intrinsic-ratio-extend)
+  @if $extend
+    @extend %intrinsic-ratio-child
+  @else
+    display: block
+    position: absolute
+    width: 100% !important
+    // Nuke the external styles
+    height: 100% !important
+    // Nuke the external styles
+    top: 0
+    margin: 0
+    padding: 0
+
+=intrinsic-ratio-ratio($ratio: $intrinsic-ratio, $width: $intrinsic-ratio-width, $direction: $intrinsic-ratio-direction)
+  padding-#{$direction}: 1 / $ratio * $width
+  width: $width
+
+=intrinsic-ratio($ratio: $intrinsic-ratio, $width: $intrinsic-ratio-width, $elements: $intrinsic-ratio-elements, $extend: $intrinsic-ratio-extend, $direction: $intrinsic-ratio-direction)
+  +intrinsic-ratio-parent($extend)
+  +intrinsic-ratio-ratio($ratio, $width, $direction)
+  @each $element in $elements
+    #{$element}
+      +intrinsic-ratio-child($extend)
+
+=ir($ratio: $intrinsic-ratio, $width: $intrinsic-ratio-width, $elements: $intrinsic-ratio-elements, $extend: $intrinsic-ratio-extend, $direction: $intrinsic-ratio-direction)
+  +intrinsic-ratio($ratio, $width, $elements, $extend, $direction)
+
+%intrinsic-ratio-parent
+  +intrinsic-ratio-parent(false)
+
+%intrinsic-ratio-child
+  +intrinsic-ratio-child(false)

@@ -1,0 +1,27 @@
+{
+  "name": "inuit-normalize.css",
+  "version": "3.0.1",
+  "homepage": "https://github.com/inuitcss/generic.normalize",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>",
+    "Nicolas Gallagher <nicolasgallagher@gmail.com>"
+  ],
+  "description": "Nicolas Gallagher’s Normalize.css used in the inuitcss framework",
+  "main": "_generic.normalize.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css",
+    "normalize"
+  ],
+  "license": "MIT",
+  "_release": "3.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.1",
+    "commit": "3cac69c687ec5ec18c13bc7d97755dfce835aed3"
+  },
+  "_source": "git://github.com/inuitcss/generic.normalize.git",
+  "_target": "3.0.1",
+  "_originalSource": "inuit-normalize"
+}

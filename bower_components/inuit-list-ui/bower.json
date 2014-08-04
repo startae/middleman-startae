@@ -1,0 +1,20 @@
+{
+  "name": "inuit-list-ui",
+  "version": "0.4.1",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "A simple, keyline-delimited list object",
+  "main": "_objects.list-ui.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "homepage": "https://github.com/inuitcss/objects.list-ui",
+  "dependencies": {
+    "inuit-defaults": "~0.2.1",
+    "inuit-functions": "~0.2.0"
+  }
+}

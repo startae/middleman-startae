@@ -1,0 +1,25 @@
+{
+  "name": "inuit-clearfix",
+  "version": "0.2.0",
+  "homepage": "https://github.com/inuitcss/generic.clearfix",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "Small clearfixing utility for the inuitcss framework",
+  "main": "_generic.clearfix.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.0",
+    "commit": "ad3ae5dc7f1f9dceaecf93202effa9528896fb7d"
+  },
+  "_source": "git://github.com/inuitcss/generic.clearfix.git",
+  "_target": "~0.2.0",
+  "_originalSource": "inuit-clearfix"
+}
