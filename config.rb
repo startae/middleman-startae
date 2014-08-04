@@ -30,62 +30,6 @@ end
 # ----------------------------------------------
 
 
-# Helpers
-# ----------------------------------------------
-helpers do
-
-  # gzip css
-  def gzip_css_on_build(key)
-    o = stylesheet_link_tag(key)
-    o.sub!(".css", ".css.gz") if build?
-    o
-  end
-
-  # gzip js
-  def gzip_js_on_build(key)
-    o = javascript_include_tag(key)
-    o.sub!(".js", ".js.gz") if build?
-    o
-  end
-
-  # Calculate the years for a copyright
-  def copyright_years(start_year)
-    end_year = Date.today.year
-    if start_year == end_year
-      start_year.to_s
-    else
-      start_year.to_s + '-' + end_year.to_s
-    end
-  end
-
-  def current_year
-    Time.now.year
-  end
-
-  # FAKER HELPERS
-  def random_name
-    Faker::Name.name
-  end
-
-  def random_address
-    "#{Faker::Address.street_address},<br/>#{Faker::Address.city}, #{Faker::Address.state}<br/>#{Faker::Address.postcode}"
-  end
-
-  def random_company_name
-    Faker::Company.name
-  end
-
-  def random_phone_number
-    Faker::PhoneNumber.phone_number
-  end
-
-  def random_email_address
-    Faker::Internet.email
-  end
-
-end
-
-
 # Bower Config
 # ----------------------------------------------
 after_configuration do
