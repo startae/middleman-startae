@@ -4,5 +4,7 @@ html.no-js class="#{data.page.page_class}" lang="#{I18n.locale}"
     = partial 'head'
   body
     = partial 'body_top'
+    = partial 'header'
     = yield
+    = partial 'footer'
     = partial 'body_bottom'
