@@ -21,6 +21,5 @@
   },
   "_source": "git://github.com/inuitcss/base.images.git",
   "_target": "~0.3.2",
-  "_originalSource": "inuit-images",
-  "_direct": true
+  "_originalSource": "inuit-images"
 }

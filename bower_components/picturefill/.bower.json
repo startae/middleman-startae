@@ -38,6 +38,5 @@
   },
   "_source": "git://github.com/scottjehl/picturefill.git",
   "_target": "~2.1.0",
-  "_originalSource": "picturefill",
-  "_direct": true
+  "_originalSource": "picturefill"
 }

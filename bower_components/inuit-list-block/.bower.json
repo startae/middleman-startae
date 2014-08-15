@@ -25,6 +25,5 @@
   },
   "_source": "git://github.com/inuitcss/objects.list-block.git",
   "_target": "~0.4.2",
-  "_originalSource": "inuit-list-block",
-  "_direct": true
+  "_originalSource": "inuit-list-block"
 }

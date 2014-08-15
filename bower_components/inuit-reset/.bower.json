@@ -21,6 +21,5 @@
   },
   "_source": "git://github.com/inuitcss/generic.reset.git",
   "_target": "~0.1.1",
-  "_originalSource": "inuit-reset",
-  "_direct": true
+  "_originalSource": "inuit-reset"
 }

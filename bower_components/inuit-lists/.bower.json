@@ -10,6 +10,5 @@
   },
   "_source": "git://github.com/inuitcss/base.lists.git",
   "_target": "~0.1.0",
-  "_originalSource": "inuit-lists",
-  "_direct": true
+  "_originalSource": "inuit-lists"
 }
