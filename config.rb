@@ -65,8 +65,6 @@ end
 # Build-specific configuration
 # ----------------------------------------------
 configure :build do
-  ignore "/bower_components/*"
-
   # Use relative URLs
   activate :directory_indexes
 
