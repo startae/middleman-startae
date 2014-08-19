@@ -1,0 +1,10 @@
+doctype 5
+html.no-js class="#{page_classes}" lang="#{I18n.locale}"
+  head
+    = partial '/shared/head'
+  body
+    = partial '/shared/body_top'
+    = partial '/shared/header'
+    = yield
+    = partial '/shared/footer'
+    = partial '/shared/body_bottom'
