@@ -80,7 +80,7 @@ GEM
     middleman-smusher (3.0.0)
       middleman (>= 3.0.0)
       smusher (~> 0.4.9)
-    middleman-sprockets (3.3.8)
+    middleman-sprockets (3.3.9)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
       sprockets-helpers (~> 1.1.0)
