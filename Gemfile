@@ -4,9 +4,7 @@ source 'https://rubygems.org'
 gem 'unicorn', '~> 4.8.3'
 
 # Middleman Gems
-gem 'middleman', '~>3.3.5'
-gem 'middleman-smusher', '~> 3.0.0'
-gem 'middleman-livereload', '~> 3.3.4' # LiveReload plugin
+gem 'middleman', '~> 4.0.0.alpha.2'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]

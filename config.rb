@@ -21,31 +21,41 @@ activate :i18n, :mount_at_root => :'pt-BR'
 # Livereload
 # Reload the browser automatically whenever files change
 # ----------------------------------------------
-configure :development do
-  activate :livereload, :no_swf => true
-end
+# configure :development do
+#   activate :livereload, :no_swf => true
+# end
 
 
 # Page options, layouts, aliases and proxies
 # ----------------------------------------------
 
+# Per-page layout changes:
+#
+# With no layout
+page '/*.xml',   layout: false
+page '/*.json',  layout: false
+page '/*.txt',   layout: false
+
 
 # Bower Config
 # ----------------------------------------------
-after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-  sprockets.append_path @bower_assets_path
-end
+# after_configuration do
+#   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+#   @bower_assets_path = File.join "#{root}", @bower_config["directory"]
+#   sprockets.append_path @bower_assets_path
+# end
+
+
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
 
 
 # Configure assets directories
 # ----------------------------------------------
-config[:css_dir] = 'assets/stylesheets'
-config[:js_dir] = 'assets/javascripts'
-config[:images_dir] = 'assets/images'
-config[:fonts_dir] = 'assets/fonts'
-config[:partials_dir] = 'shared'
+set :css_dir,     "assets/stylesheets"
+set :js_dir,      "assets/javascripts"
+set :images_dir,  "assets/images"
+set :fonts_dir,   "assets/images"
 
 
 # Other configurations
@@ -79,9 +89,6 @@ configure :build do
 
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash
-
-  # Enable cache buster
-  activate :cache_buster
 
   # Compress PNGs after build (First: gem install middleman-smusher)
   # require "middleman-smusher"
