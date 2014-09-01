@@ -23,6 +23,12 @@ This is a base [Middleman](http://middlemanapp.com) template application. This s
 
 ## Installation
 
+### Instalation using Middleman v3+
+1. Download or clone this repository to: `git clone git://github.com/startae/middleman-startae.git ~/.middleman/middleman-startae`
+2. Create your new Middleman project with: `middleman init my_new_project --template=middleman-startae`
+3. Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower npm package installed: `npm install -g bower`)
+
+### Instalation using Middleman v4+
 Simply run:
 `middleman init my_new_project --template=startae/middleman-startae`
 
