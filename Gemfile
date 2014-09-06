@@ -16,7 +16,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Precompilers
 gem 'slim', '~> 2.0.3'
-gem 'sass', '~> 3.4.2'
+gem 'sass', '~> 3.4.3'
 gem 'compass', '~> 1.0.1' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
 gem 'coffee-script', '~> 2.3.0'
 
