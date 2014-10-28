@@ -1,6 +1,6 @@
 {
   "name": "inuit-media",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "homepage": "https://github.com/inuitcss/objects.media",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -18,13 +18,13 @@
     "inuit-clearfix": "~0.2.0",
     "inuit-functions": "~0.2.0"
   },
-  "_release": "0.4.1",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "4c68130aec8ff8f106d1d675acf0b2f97f4a8149"
+    "tag": "0.4.2",
+    "commit": "cdbaca1ae766de06caa619e0ab75592bc11fc394"
   },
   "_source": "git://github.com/inuitcss/objects.media.git",
-  "_target": "~0.4.1",
+  "_target": "~0.4.2",
   "_originalSource": "inuit-media"
 }
