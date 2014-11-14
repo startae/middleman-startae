@@ -16,7 +16,6 @@ This is a base [Middleman](http://middlemanapp.com) template application. This s
 * Language configuration
 * Gzip
 * Faker (Fake content generator with several helpers predefined)
-* 404 Page configured
 * Preconfigured partials
 * Metatags helper
 
@@ -28,7 +27,7 @@ This is a base [Middleman](http://middlemanapp.com) template application. This s
 2. Create your new Middleman project with: `middleman init my_new_project --template=middleman-startae`
 3. Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower npm package installed: `npm install -g bower`)
 
-### Instalation using Middleman v4+
+### Instalation using Middleman v4+ (Still in beta)
 Simply run:
 `middleman init my_new_project --template=startae/middleman-startae`
 
