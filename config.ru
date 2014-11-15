@@ -3,7 +3,8 @@ require 'middleman/rack'
 require 'rack'
 require 'rack/contrib/try_static'
 
-run Middleman.server
+# Build the static site when the app boots
+`bundle exec middleman build`
 
 # Properly compress the output if the client can handle it.
 use Rack::Deflater
