@@ -1,12 +1,19 @@
 source 'https://rubygems.org'
 
-# server
-gem 'unicorn', '~> 4.8.3'
+# HTTP server for Rack recommended by Heroku
+gem 'unicorn'
 
-# Middleman Gems
+# Middleman
 gem 'middleman', '~> 3.3.7'
+
+# Compress images in your Middleman project
 gem 'middleman-smusher', '~> 3.0.0'
-gem 'middleman-livereload', '~> 3.3.4' # LiveReload plugin
+
+# LiveReload plugin
+gem 'middleman-livereload', '~> 3.3.4'
+
+# Rack Middleware and Utilities
+gem "rack-contrib"
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
