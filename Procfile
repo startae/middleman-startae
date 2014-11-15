@@ -1,1 +1,1 @@
-web: bundle exec middleman build && bundle exec unicorn -p $PORT
+web: bundle exec unicorn -p $PORT config.ru
