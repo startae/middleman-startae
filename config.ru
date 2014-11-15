@@ -1,10 +1,9 @@
 require 'rubygems'
-
+require 'middleman/rack'
 require 'rack'
 require 'rack/contrib/try_static'
 
-# Build the static site when the app boots
-`bundle exec middleman build`
+run Middleman.server
 
 # Properly compress the output if the client can handle it.
 use Rack::Deflater
