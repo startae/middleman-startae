@@ -13,6 +13,9 @@ gem 'middleman-smusher', '~> 3.0.0'
 # LiveReload plugin
 gem 'middleman-livereload', '~> 3.3.4'
 
+# Rack Middleware and Utilities
+gem "rack-contrib"
+
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
 
