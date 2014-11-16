@@ -95,8 +95,6 @@ GEM
     padrino-support (0.12.4)
       activesupport (>= 3.1)
     rack (1.5.2)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.2)
@@ -151,7 +149,6 @@ DEPENDENCIES
   middleman (~> 3.3.7)
   middleman-livereload (~> 3.3.4)
   middleman-smusher (~> 3.0.0)
-  rack-contrib
   sass (~> 3.4.7)
   slim (~> 2.1.0)
   tzinfo-data

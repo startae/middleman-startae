@@ -14,7 +14,6 @@ This is a base [Middleman](http://middlemanapp.com) template application. This s
 * [Coffeescript](http://coffeescript.org)
 * [jQuery](http://jquery.com): jQuery is a fast, small, and feature-rich JavaScript library.
 * Language configuration
-* Page not found configuration
 * Gzip
 * Faker (Fake content generator with several helpers predefined)
 * Preconfigured partials
