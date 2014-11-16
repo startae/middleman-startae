@@ -5,6 +5,10 @@
 # Site Settings
 # ----------------------------------------------
 @google_analytics = ''
+set :site_name, 'Middleman Startaê'
+set :site_description, 'A Static Site Generator'
+set :site_url, 'http://middleman-startae.herokuapp.com'
+set :site_twitter, '@querostartae'
 
 
 # Slim HTML
@@ -84,6 +88,6 @@ configure :build do
   activate :cache_buster
 
   # Compress PNGs after build (First: gem install middleman-smusher)
-  # require "middleman-smusher"
-  # activate :smusher
+  require "middleman-smusher"
+  activate :smusher
 end

@@ -1,26 +1,19 @@
 meta charset='utf-8'
 title = page_title
-
 = stylesheet_link_tag 'application.css', media: 'all'
-/ Prefetch DNS for external assets (Twitter widgets etc).
 link rel='dns-prefetch' href='//cdnjs.cloudflare.com'
 link rel='dns-prefetch' href='//www.google-analytics.com'
 link rel='shortcut icon' href="#{image_path('favicon.png')}"
-
 meta content='initial-scale=1, user-scalable=yes, width=device-width' name='viewport'
 meta http-equiv='X-UA-Compatible' content='IE=edge'
 meta content='on' http-equiv='cleartype'
 meta content='True' name='HandheldFriendly'
 meta content='320' name='MobileOptimized'
-
-meta name='description' content="#{page_description}"
-meta name='keywords' content="#{page_keywords}"
-meta name='author' content="#{page_author}"
-
+= partial 'metatags'
 / -------------------------------------
 / Modernizr - Development version
-/ Use the Development version to develop with and learn from. Then, when you’re
-/ ready for production, use the build tool below to pick only the tests you need.
+/ This is the Development version. Remember to use
+/ the build tool below to pick only the tests you need.
 / -------------------------------------
 = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js'
 /[if lt IE 9]
