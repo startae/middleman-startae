@@ -1,0 +1,20 @@
+{
+  "name": "inuit-flag",
+  "version": "0.3.2",
+  "homepage": "https://github.com/inuitcss/objects.flag",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "The inuitcss framework’s flag object",
+  "main": "_objects.flag.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "inuit-defaults": "~0.2.0",
+    "inuit-functions": "~0.2.0"
+  }
+}

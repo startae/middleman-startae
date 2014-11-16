@@ -1,0 +1,494 @@
+/*------------------------------------*\
+    #FLAG
+\*------------------------------------*/
+
+/**
+ * The flag object is a design pattern similar to the media object, however it
+ * utilises `display: table[-cell];` to give us control over the vertical
+ * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-flag-namespace:          $inuit-namespace !default;
+
+$inuit-flag-gutter:             $inuit-base-spacing-unit !default;
+$inuit-flag-gutter--tiny:         quarter($inuit-flag-gutter) !default;
+$inuit-flag-gutter--small:          halve($inuit-flag-gutter) !default;
+$inuit-flag-gutter--large:         double($inuit-flag-gutter) !default;
+$inuit-flag-gutter--huge:       quadruple($inuit-flag-gutter) !default;
+
+$inuit-enable-flag--tiny:       false !default;
+$inuit-enable-flag--small:      false !default;
+$inuit-enable-flag--large:      false !default;
+$inuit-enable-flag--huge:       false !default;
+$inuit-enable-flag--rev:        false !default;
+$inuit-enable-flag--flush:      false !default;
+$inuit-enable-flag--top:        false !default;
+$inuit-enable-flag--bottom:     false !default;
+$inuit-enable-flag--responsive: false !default;
+$inuit-flag-collapse-at:        720px !default;
+
+
+
+
+
+/**
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ */
+.#{$inuit-flag-namespace}flag,
+%#{$inuit-flag-namespace}flag {
+    display: table; /* [1] */
+    width: 100%; /* [2] */
+}
+
+    /**
+     * Items within a flag object. There should only ever be one of each.
+     *
+     * 1. Default to aligning content to their middles.
+     */
+    .#{$inuit-flag-namespace}flag__img,
+    %#{$inuit-flag-namespace}flag__img,
+    .#{$inuit-flag-namespace}flag__body,
+    %#{$inuit-flag-namespace}flag__body {
+        display: table-cell;
+        vertical-align: middle; /* [1] */
+    }
+
+    /**
+     * Flag images have a space between them and the body of the object.
+     */
+    .#{$inuit-flag-namespace}flag__img,
+    %#{$inuit-flag-namespace}flag__img {
+        padding-right: $inuit-flag-gutter;
+
+        > img {
+            display: block;
+            max-width: none;
+        }
+
+    }
+
+    /**
+     * The container for the main content of the flag object.
+     *
+     * 1. Forces the `.flag__body` to take up all remaining space.
+     */
+    .#{$inuit-flag-namespace}flag__body,
+    %#{$inuit-flag-namespace}flag__body {
+        width: 100%; /* [1] */
+
+        &,
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+
+
+
+
+@if ($inuit-enable-flag--tiny == true) {
+
+    /**
+     * Tiny flags.
+     */
+
+    .#{$inuit-flag-namespace}flag--tiny,
+    %#{$inuit-flag-namespace}flag--tiny {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img {
+            padding-right: $inuit-flag-gutter--tiny;
+        }
+
+        @if ($inuit-enable-flag--rev == true) {
+
+            /**
+             * Tiny reversed flags.
+             */
+
+            &.#{$inuit-flag-namespace}flag--rev,
+            &%#{$inuit-flag-namespace}flag--rev {
+
+                > .#{$inuit-flag-namespace}flag__img,
+                > %#{$inuit-flag-namespace}flag__img {
+                    padding-right: 0;
+                    padding-left:  $inuit-flag-gutter--tiny;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-flag--small == true) {
+
+    /**
+     * Small flags.
+     */
+
+    .#{$inuit-flag-namespace}flag--small,
+    %#{$inuit-flag-namespace}flag--small {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img {
+            padding-right: $inuit-flag-gutter--small;
+        }
+
+        @if ($inuit-enable-flag--rev == true) {
+
+            /**
+             * Small reversed flags.
+             */
+
+            &.#{$inuit-flag-namespace}flag--rev,
+            &%#{$inuit-flag-namespace}flag--rev {
+
+                > .#{$inuit-flag-namespace}flag__img,
+                > %#{$inuit-flag-namespace}flag__img {
+                    padding-right: 0;
+                    padding-left:  $inuit-flag-gutter--small;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-flag--large == true) {
+
+    /**
+     * Large flags.
+     */
+
+    .#{$inuit-flag-namespace}flag--large,
+    %#{$inuit-flag-namespace}flag--large {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img {
+            padding-right: $inuit-flag-gutter--large;
+        }
+
+        @if ($inuit-enable-flag--rev == true) {
+
+            /**
+             * Large reversed flags.
+             */
+
+            &.#{$inuit-flag-namespace}flag--rev,
+            &%#{$inuit-flag-namespace}flag--rev {
+
+                > .#{$inuit-flag-namespace}flag__img,
+                > %#{$inuit-flag-namespace}flag__img {
+                    padding-right: 0;
+                    padding-left:  $inuit-flag-gutter--large;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-flag--huge == true) {
+
+    /**
+     * Huge flags.
+     */
+
+    .#{$inuit-flag-namespace}flag--huge,
+    %#{$inuit-flag-namespace}flag--huge {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img {
+            padding-right: $inuit-flag-gutter--huge;
+        }
+
+        @if ($inuit-enable-flag--rev == true) {
+
+            /**
+             * Huge reversed flags.
+             */
+
+            &.#{$inuit-flag-namespace}flag--rev,
+            &%#{$inuit-flag-namespace}flag--rev {
+
+                > .#{$inuit-flag-namespace}flag__img,
+                > %#{$inuit-flag-namespace}flag__img {
+                    padding-right: 0;
+                    padding-left:  $inuit-flag-gutter--huge;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-flag--rev == true) {
+
+    /**
+     * Reversed flag objects have their image-content to the right, and text-content
+     * to the left.
+     *
+     * 1. Swap the rendered direction of the object…
+     * 2. …and reset it.
+     * 3. Reassign margins to the correct sides.
+     */
+
+    .#{$inuit-flag-namespace}flag--rev,
+    %#{$inuit-flag-namespace}flag--rev {
+        direction: rtl; /* [1] */
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img,
+        > .#{$inuit-flag-namespace}flag__body,
+        > %#{$inuit-flag-namespace}flag__body {
+            direction: ltr; /* [2] */
+        }
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img {
+            padding-right: 0; /* [3] */
+            padding-left: $inuit-flag-gutter; /* [3] */
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-flag--flush == true) {
+
+    /**
+     * Flush flag objects have no space between the image- and text-content.
+     */
+
+    .#{$inuit-flag-namespace}flag--flush,
+    %#{$inuit-flag-namespace}flag--flush {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img {
+            padding-right: 0;
+            padding-left:  0;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-flag--top == true) {
+
+    /**
+     * Vertically top aligned flag objects.
+     */
+
+    .#{$inuit-flag-namespace}flag--top,
+    %#{$inuit-flag-namespace}flag--top {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img,
+        > .#{$inuit-flag-namespace}flag__body,
+        > %#{$inuit-flag-namespace}flag__body {
+            vertical-align: top;
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-flag--bottom == true) {
+
+    /**
+     * Vertically bottom aligned flag objects.
+     */
+
+    .#{$inuit-flag-namespace}flag--bottom,
+    %#{$inuit-flag-namespace}flag--bottom {
+
+        > .#{$inuit-flag-namespace}flag__img,
+        > %#{$inuit-flag-namespace}flag__img,
+        > .#{$inuit-flag-namespace}flag__body,
+        > %#{$inuit-flag-namespace}flag__body {
+            vertical-align: bottom;
+        }
+
+    }
+
+}
+
+
+
+
+@if ($inuit-enable-flag--responsive == true) {
+
+    /**
+     * Responsive flag objects.
+     *
+     * There is a very pragmatic, simple implementation of a responsive flag
+     * object, which simply places the text-content beneath the image-content.
+     *
+     * We use a `max-width` media query because:
+     *
+     * a) it is the least verbose method in terms of amount of code required.
+     * b) the flag object’s default state is image-next-to-text, so its stacked
+     *    state is the exception, rather than the rule.
+     */
+
+    @media screen and (max-width: $inuit-flag-collapse-at) {
+
+        .#{$inuit-flag-namespace}flag--responsive,
+        %#{$inuit-flag-namespace}flag--responsive {
+
+            @if ($inuit-enable-flag--rev == true) {
+
+                /**
+                 * Disable reversal of content because there is no concept of
+                 * ‘reversed’ in a stacked layout.
+                 */
+                direction: ltr;
+            }
+
+            &,
+            > .#{$inuit-flag-namespace}flag__img,
+            > %#{$inuit-flag-namespace}flag__img,
+            > .#{$inuit-flag-namespace}flag__body,
+            > %#{$inuit-flag-namespace}flag__body {
+                display: block;
+            }
+
+            /**
+             * Rework the spacings on regular flag objects.
+             */
+            > .#{$inuit-flag-namespace}flag__img,
+            > %#{$inuit-flag-namespace}flag__img {
+                padding-right: 0;
+                padding-left:  0;
+                margin-bottom: $inuit-flag-gutter;
+            }
+
+            @if ($inuit-enable-flag--tiny == true) {
+
+                /**
+                 * Tiny responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also tiny flags in their regular
+                 * state.
+                 */
+
+                &.#{$inuit-flag-namespace}flag--tiny,
+                &%#{$inuit-flag-namespace}flag--tiny {
+
+                    > .#{$inuit-flag-namespace}flag__img,
+                    > %#{$inuit-flag-namespace}flag__img {
+                        padding-right: 0;
+                        padding-left:  0;
+                        margin-bottom: $inuit-flag-gutter--tiny;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-flag--small == true) {
+
+                /**
+                 * Small responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also small flags in their regular
+                 * state.
+                 */
+
+                &.#{$inuit-flag-namespace}flag--small,
+                &%#{$inuit-flag-namespace}flag--small {
+
+                    > .#{$inuit-flag-namespace}flag__img,
+                    > %#{$inuit-flag-namespace}flag__img {
+                        padding-right: 0;
+                        padding-left:  0;
+                        margin-bottom: $inuit-flag-gutter--small;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-flag--large == true) {
+
+                /**
+                 * Large responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also large flags in their regular
+                 * state.
+                 */
+
+                &.#{$inuit-flag-namespace}flag--large,
+                &%#{$inuit-flag-namespace}flag--large {
+
+                    > .#{$inuit-flag-namespace}flag__img,
+                    > %#{$inuit-flag-namespace}flag__img {
+                        padding-right: 0;
+                        padding-left:  0;
+                        margin-bottom: $inuit-flag-gutter--large;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-flag--huge == true) {
+
+                /**
+                 * Huge responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also huge flags in their regular
+                 * state.
+                 */
+
+                &.#{$inuit-flag-namespace}flag--huge,
+                &%#{$inuit-flag-namespace}flag--huge {
+
+                    > .#{$inuit-flag-namespace}flag__img,
+                    > %#{$inuit-flag-namespace}flag__img {
+                        padding-right: 0;
+                        padding-left:  0;
+                        margin-bottom: $inuit-flag-gutter--huge;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,9 +1,9 @@
-// **************************************
+// --------------------------------------
 //
 //   #tools.mediaqueries
 //   http://www.sitepoint.com/managing-responsive-breakpoints-sass/
 //
-// **************************************
+// --------------------------------------
 
 
 $breakpoints: ("small": "(max-width: 520px)", "medium": "(min-width: 521px)", "large": "(min-width: 920px)", "xlarge": "(min-width: 1220px)", "large-shorter": "(min-width: 920px) and ( max-height: 600px)")
@@ -27,6 +27,7 @@ $breakpoints: ("small": "(max-width: 520px)", "medium": "(min-width: 521px)", "l
   @else
     // Just warn the user
     @warn "Unfortunately, no value could be retrieved from `#{$name}`. " + "Please make sure it is defined in `$breakpoints` map. " + "Or pass the media query as a second parameter to add it to the map."
+
 
 // ------------------------------------------------------------------
 //   @mixin respond-to

@@ -1,0 +1,29 @@
+{
+  "name": "inuit-list-inline",
+  "version": "0.3.2",
+  "homepage": "https://github.com/inuitcss/objects.list-inline",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "A simple object to remove bullets and indents from lists",
+  "main": "_objects.list-inline.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "inuit-defaults": "~0.2.0"
+  },
+  "_release": "0.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.2",
+    "commit": "33290e7973c770324c99064cf49da51fa946785c"
+  },
+  "_source": "git://github.com/inuitcss/objects.list-inline.git",
+  "_target": "~0.3.2",
+  "_originalSource": "inuit-list-inline",
+  "_direct": true
+}
