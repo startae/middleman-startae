@@ -1,0 +1,23 @@
+// **************************************
+//
+//   #components.buttons
+//
+// **************************************
+
+
+.btn
+  +font-weight(bold)
+  +transition(all 0.2s)
+
+  +attention()
+    background-color: darken($color-btn, 10%)
+    border-color: darken($color-btn, 10%)
+
+
+.btn--secondary
+  background: none
+  color: $color-btn
+
+  +attention()
+    background: none
+    color: darken($color-btn, 10%)

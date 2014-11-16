@@ -18,14 +18,18 @@
 //  7. TRUMPS..........High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
 // -------------------------------------
 
+
 // [0] REQUIREMENTS
 @import "requirements"
 
+
 // [1] #SETTINGS
 @import "inuit-defaults/settings.defaults"
+@import "settings/settings.global"
 @import "settings/settings.fonts"
 @import "settings/settings.colors"
 @import "settings/settings.grid"
+
 
 // [2] #TOOLS
 @import "inuit-functions/tools.functions"
@@ -41,13 +45,20 @@
 @import "inuit-box-sizing/generic.box-sizing"
 @import "inuit-shared/generic.shared"
 
+
 // [4] #BASE
 @import "inuit-page/base.page"
 @import "base/base.page"
+@import "base/base.type"
 @import "inuit-lists/base.lists"
 @import "inuit-images/base.images"
 
+
 // [5] #OBJECTS
+$inuit-btn-radius:        $base-radius
+$inuit-enable-btn--small: true
+$inuit-enable-btn--large: true
+$inuit-enable-btn--full:  true
 @import "inuit-buttons/objects.buttons"
 @import "inuit-list-block/objects.list-block"
 @import "inuit-list-bare/objects.list-bare"
@@ -55,8 +66,15 @@
 @import "inuit-media/objects.media"
 @import "objects/objects.containers"
 
+
 // [6] #COMPONENTS
-@import "components/components.site-nav"
+@import "components/components.buttons"
+
 
 // [7] #TRUMPS
 @import "inuit-clearfix/trumps.clearfix"
+
+$inuit-enable-margins:       true
+$inuit-enable-margins--huge: true
+$inuit-enable-margins--none: true
+@import "inuit-spacing/trumps.spacing"
