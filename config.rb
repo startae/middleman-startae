@@ -45,11 +45,11 @@ end
 
 # Configure assets directories
 # ----------------------------------------------
-config[:css_dir] = 'assets/stylesheets'
-config[:js_dir] = 'assets/javascripts'
-config[:images_dir] = 'assets/images'
-config[:fonts_dir] = 'assets/fonts'
-config[:partials_dir] = 'shared'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
+set :partials_dir, 'shared'
 
 
 # Other configurations
