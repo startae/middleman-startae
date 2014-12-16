@@ -25,6 +25,5 @@
   },
   "_source": "git://github.com/inuitcss/objects.flag.git",
   "_target": "~0.3.2",
-  "_originalSource": "inuit-flag",
-  "_direct": true
+  "_originalSource": "inuit-flag"
 }

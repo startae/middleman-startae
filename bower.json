@@ -12,7 +12,7 @@
     "fastclick": "~1.0.3",
     "enquire": "~2.1.2",
     "jquery": "~2.1.1",
-    "picturefill": "~2.2.0-beta",
+    "picturefill": "~2.2.0",
     "inuit-defaults": "0.2.1",
     "inuit-functions": "0.2.0",
     "inuit-mixins": "0.2.3",
