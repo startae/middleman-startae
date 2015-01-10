@@ -1,3 +1,11 @@
+// The following features have been deprecated and will be removed in the next MAJOR version release
+
+@mixin inline-block {
+  display: inline-block;
+
+  @warn "The inline-block mixin is deprecated and will be removed in the next major version release";
+}
+
 @mixin button ($style: simple, $base-color: #4294f0, $text-size: inherit, $padding: 7px 18px) {
 
   @if type-of($style) == string and type-of($base-color) == color {
@@ -52,11 +60,11 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+
+  @warn "The button mixin is deprecated and will be removed in the next major version release";
 }
 
-
 // Selector Style Button
-//************************************************************************//
 @mixin buttonstyle($type, $b-color, $t-size, $pad) {
   // Grayscale button
   @if $type == simple and $b-color == grayscale($b-color) {
@@ -93,9 +101,7 @@
   }
 }
 
-
 // Simple Button
-//************************************************************************//
 @mixin simple($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
   $color:         hsl(0, 0, 100%);
   $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
@@ -159,9 +165,7 @@
   }
 }
 
-
 // Shiny Button
-//************************************************************************//
 @mixin shiny($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
   $color:         hsl(0, 0, 100%);
   $border:        adjust-color($base-color, $red: -117, $green: -111, $blue: -81);
@@ -233,9 +237,7 @@
   }
 }
 
-
 // Pill Button
-//************************************************************************//
 @mixin pill($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
   $color:         hsl(0, 0, 100%);
   $border-bottom: adjust-color($base-color, $hue:  8, $saturation: -11%, $lightness: -26%);
@@ -327,10 +329,7 @@
   }
 }
 
-
-
 // Flat Button
-//************************************************************************//
 @mixin flat($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
   $color:         hsl(0, 0, 100%);
 
@@ -343,9 +342,9 @@
   border: none;
   color: $color;
   display: inline-block;
-  font-size: inherit;
+  font-size: $textsize;
   font-weight: bold;
-  padding: 7px 18px;
+  padding: $padding;
   text-decoration: none;
   background-clip: padding-box;
 
@@ -371,4 +370,33 @@
     background-color: $base-color-active;
     cursor: pointer;
   }
+}
+
+// Flexible grid
+@function flex-grid($columns, $container-columns: $fg-max-columns) {
+  $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($width / $container-width);
+
+  @warn "The flex-grid function is deprecated and will be removed in the next major version release";
+}
+
+// Flexible gutter
+@function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($gutter / $container-width);
+
+  @warn "The flex-gutter function is deprecated and will be removed in the next major version release";
+}
+
+@function grid-width($n) {
+  @return $n * $gw-column + ($n - 1) * $gw-gutter;
+
+  @warn "The grid-width function is deprecated and will be removed in the next major version release";
+}
+
+@function golden-ratio($value, $increment) {
+  @return modular-scale($increment, $value, $ratio: $golden);
+
+  @warn "The golden-ratio function is deprecated and will be removed in the next major version release. Please use the modular-scale function, instead.";
 }

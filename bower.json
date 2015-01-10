@@ -7,11 +7,11 @@
     "Renato Carvalho <renato@startae.com.br>"
   ],
   "dependencies": {
-    "bourbon": "~4.0.2",
+    "bourbon": "~4.1.0",
     "susy": "~2.1.3",
     "fastclick": "~1.0.3",
     "enquire": "~2.1.2",
-    "jquery": "~2.1.1",
+    "jquery": "~2.1.3",
     "picturefill": "~2.2.0",
     "inuit-defaults": "0.2.1",
     "inuit-functions": "0.2.0",
