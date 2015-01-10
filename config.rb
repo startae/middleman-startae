@@ -13,8 +13,7 @@ set :site_twitter, '@querostartae'
 
 # Slim HTML
 # ----------------------------------------------
-::Slim::Engine.set_default_options :format  => :html5
-::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
+::Slim::Engine.set_options :format  => :html
 
 
 # i18n
@@ -62,7 +61,7 @@ set :trailing_slash, false
 configure :development do
   activate :directory_indexes
   set :debug_assets, true
-  ::Slim::Engine.set_default_options :pretty => true
+  ::Slim::Engine.set_options :pretty => true
 end
 
 
