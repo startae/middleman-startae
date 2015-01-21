@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-# ruby '2.1.4'
+# ruby '2.2.0'
 
 # HTTP server for Rack recommended by Heroku
 gem 'unicorn'
@@ -24,8 +24,8 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Precompilers
 gem 'slim', '~> 3.0.1'
-gem 'sass', '~> 3.4.9'
-gem 'compass', '~> 1.0.1' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
+gem 'sass', '~> 3.4.10'
+gem 'compass', '~> 1.0.3' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
 gem 'coffee-script', '~> 2.3.0'
 
 # Generate fake data
