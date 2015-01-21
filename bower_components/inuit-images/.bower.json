@@ -1,6 +1,6 @@
 {
   "name": "inuit-images",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "homepage": "https://github.com/inuitcss/base.images",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -13,13 +13,13 @@
     "css"
   ],
   "license": "Apache",
-  "_release": "0.3.2",
+  "_release": "0.3.3",
   "_resolution": {
     "type": "version",
-    "tag": "0.3.2",
-    "commit": "c6fe0243793dcf09dbfa8e33596d21b9f0b924e6"
+    "tag": "0.3.3",
+    "commit": "c45dcfb390a0ad3dfaf395fc39e41fb7b18cd887"
   },
   "_source": "git://github.com/inuitcss/base.images.git",
-  "_target": "~0.3.2",
+  "_target": "~0.3.3",
   "_originalSource": "inuit-images"
 }

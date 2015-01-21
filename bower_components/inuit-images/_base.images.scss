@@ -9,7 +9,7 @@
  *    elements when they are dropped into a page as-is. Safer alternative to
  *    using `display: block;`.
  */
-img{
+img {
     max-width: 100%; /* [1] */
     font-style: italic; /* [2] */
     vertical-align: middle; /* [3] */
