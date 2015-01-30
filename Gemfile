@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 # ruby '2.2.0'
 
-# HTTP server for Rack recommended by Heroku
-gem 'unicorn'
+# HTTP server for Ruby/Rack recommended by Heroku
+gem 'puma', '~> 2.11.0'
 
 # Middleman
 gem 'middleman', '~> 3.3.7'
