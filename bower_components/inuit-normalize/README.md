@@ -9,5 +9,9 @@ Install using Bower:
 
     $ bower install --save inuit-normalize
 
+Install using npm:
+
+    $ npm install --save inuit-normalize
+
 * Project homepage: [necolas.github.io/normalize.css](http://necolas.github.io/normalize.css/)
 * GitHub repo: [github.com/necolas/normalize.css](https://github.com/necolas/normalize.css/)

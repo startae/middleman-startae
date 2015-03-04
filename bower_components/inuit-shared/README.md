@@ -7,3 +7,7 @@ elements.
 Install using Bower:
 
     $ bower install --save inuit-shared
+
+Install using npm:
+
+    $ npm install --save inuit-shared

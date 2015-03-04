@@ -7,6 +7,11 @@ Install using Bower:
 
     $ bower install --save inuit-spacing
 
+Install using npm:
+
+    $ npm install --save inuit-spacing
+
+
 The conventions used in the classes in the spacing module are as follows:
 
     .[negative][type][direction][size] {}

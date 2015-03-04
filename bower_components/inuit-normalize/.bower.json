@@ -1,6 +1,6 @@
 {
   "name": "inuit-normalize.css",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "homepage": "https://github.com/inuitcss/generic.normalize",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>",
@@ -15,13 +15,13 @@
     "normalize"
   ],
   "license": "MIT",
-  "_release": "3.0.1",
+  "_release": "3.0.2",
   "_resolution": {
     "type": "version",
-    "tag": "3.0.1",
-    "commit": "3cac69c687ec5ec18c13bc7d97755dfce835aed3"
+    "tag": "3.0.2",
+    "commit": "518876f93dc2793d8e3e5c7f2e7bb4d0b7c47f80"
   },
   "_source": "git://github.com/inuitcss/generic.normalize.git",
-  "_target": "3.0.1",
+  "_target": "3.0.2",
   "_originalSource": "inuit-normalize"
 }

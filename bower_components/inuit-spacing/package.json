@@ -1,0 +1,25 @@
+{
+  "name": "inuit-spacing",
+  "version": "0.7.0",
+  "description": "Spacing helper classes in the inuitcss framework",
+  "main": "_trumps.spacing.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inuitcss/trumps.spacing.git"
+  },
+  "author": "Harry Roberts <harry@csswizardry.com>",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/inuitcss/trumps.spacing/issues"
+  },
+  "homepage": "https://github.com/inuitcss/trumps.spacing",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "dependencies": {
+    "inuit-defaults": "~0.2.0",
+    "inuit-functions": "~0.2.0"
+  }
+}

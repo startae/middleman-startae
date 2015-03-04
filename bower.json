@@ -7,19 +7,19 @@
     "Renato Carvalho <renato@startae.com.br>"
   ],
   "dependencies": {
-    "bourbon": "~4.1.1",
+    "bourbon": "~4.2.1",
     "susy": "~2.2.2",
     "fastclick": "~1.0.6",
     "enquire": "~2.1.2",
     "jquery": "~2.1.3",
     "picturefill": "~2.2.0",
-    "inuit-defaults": "0.2.1",
+    "inuit-defaults": "0.2.2",
     "inuit-functions": "0.2.0",
     "inuit-mixins": "0.2.3",
     "inuit-box-sizing": "0.2.0",
-    "inuit-normalize": "3.0.1",
+    "inuit-normalize": "3.0.2",
     "inuit-page": "0.2.1",
-    "inuit-shared": "~0.1.3",
+    "inuit-shared": "~0.1.5",
     "inuit-reset": "~0.1.1",
     "inuit-buttons": "~0.4.1",
     "inuit-list-block": "~0.4.2",
@@ -29,7 +29,7 @@
     "inuit-clearfix": "~0.2.1",
     "inuit-lists": "~0.1.0",
     "inuit-images": "~0.3.3",
-    "inuit-spacing": "~0.6.2",
+    "inuit-spacing": "~0.7.0",
     "inuit-flag": "~0.3.2",
     "inuit-list-inline": "~0.3.2"
   }

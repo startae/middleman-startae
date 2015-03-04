@@ -1,6 +1,6 @@
 {
   "name": "inuit-spacing",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "homepage": "https://github.com/inuitcss/trumps.spacing",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -17,13 +17,13 @@
     "inuit-defaults": "~0.2.0",
     "inuit-functions": "~0.2.0"
   },
-  "_release": "0.6.2",
+  "_release": "0.7.0",
   "_resolution": {
     "type": "version",
-    "tag": "0.6.2",
-    "commit": "2f8371d3f2760b8d462fe08573e0d1f875eafdaf"
+    "tag": "0.7.0",
+    "commit": "00030ff43646010208b94be1445cbea1eb8047c4"
   },
   "_source": "git://github.com/inuitcss/trumps.spacing.git",
-  "_target": "~0.6.2",
+  "_target": "~0.7.0",
   "_originalSource": "inuit-spacing"
 }
