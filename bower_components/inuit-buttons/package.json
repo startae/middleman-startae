@@ -1,0 +1,25 @@
+{
+  "name": "inuit-buttons",
+  "version": "0.4.2",
+  "description": "A simple, extensible button object for the inuitcss framework",
+  "main": "_objects.buttons.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inuitcss/objects.buttons.git"
+  },
+  "author": "Harry Roberts <harry@csswizardry.com>",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/inuitcss/objects.buttons/issues"
+  },
+  "homepage": "https://github.com/inuitcss/objects.buttons",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "dependencies": {
+    "inuit-functions": "~0.2.0",
+    "inuit-defaults": "~0.2.0"
+  }
+}

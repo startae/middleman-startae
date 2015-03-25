@@ -54,7 +54,6 @@ $inuit-global-border-box: false !default;
     vertical-align: middle; /* [2] */
     font: inherit; /* [3] */
     text-align: center; /* [4] */
-    border: none; /* [4] */
     margin:  0; /* [4] */
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
@@ -63,6 +62,8 @@ $inuit-global-border-box: false !default;
 
     @if($inuit-btn-border-width != 0) {
         border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
+    } @else {
+        border: none; /* [4] */
     }
 
     @if($inuit-btn-radius != 0) {

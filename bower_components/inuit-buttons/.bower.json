@@ -1,6 +1,6 @@
 {
   "name": "inuit-buttons",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "homepage": "https://github.com/inuitcss/objects.buttons",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -17,13 +17,13 @@
     "inuit-functions": "~0.2.0",
     "inuit-defaults": "~0.2.0"
   },
-  "_release": "0.4.1",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "68465f37c237e1b5fd8b08eca3075f6fa72c0d3f"
+    "tag": "0.4.2",
+    "commit": "09182ec03879336a7eb800bcdaa6cc39f8612df3"
   },
   "_source": "git://github.com/inuitcss/objects.buttons.git",
-  "_target": "~0.4.1",
+  "_target": "~0.4.2",
   "_originalSource": "inuit-buttons"
 }
