@@ -85,8 +85,4 @@ configure :build do
 
   # Enable cache buster
   activate :cache_buster
-
-  # Compress PNGs after build (First: gem install middleman-smusher)
-  require "middleman-smusher"
-  activate :smusher
 end
