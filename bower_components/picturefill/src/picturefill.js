@@ -43,6 +43,7 @@
 	(function() {
 		pf.srcsetSupported = "srcset" in image;
 		pf.sizesSupported = "sizes" in image;
+		pf.curSrcSupported = "currentSrc" in image;
 	})();
 
 	// just a string trim workaround
@@ -455,7 +456,9 @@
 					picImg.src = bestCandidate.url;
 					// currentSrc attribute and property to match
 					// http://picture.responsiveimages.org/#the-img-element
-					picImg.currentSrc = picImg.src;
+					if ( !pf.curSrcSupported ) {
+						picImg.currentSrc = picImg.src;
+					}
 
 					pf.backfaceVisibilityFix( picImg );
 				}
@@ -658,17 +661,13 @@
 			}
 		}, 250 );
 
+		var resizeTimer;
+		var handleResize = function() {
+	        picturefill({ reevaluate: true });
+	    };
 		function checkResize() {
-			var resizeThrottle;
-
-			if ( !w._picturefillWorking ) {
-				w._picturefillWorking = true;
-				w.clearTimeout( resizeThrottle );
-				resizeThrottle = w.setTimeout( function() {
-					picturefill({ reevaluate: true });
-					w._picturefillWorking = false;
-				}, 60 );
-			}
+		    clearTimeout(resizeTimer);
+		    resizeTimer = setTimeout( handleResize, 60 );
 		}
 
 		if ( w.addEventListener ) {

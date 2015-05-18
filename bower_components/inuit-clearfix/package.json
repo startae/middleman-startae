@@ -1,0 +1,21 @@
+{
+  "name": "inuit-clearfix",
+  "version": "0.2.2",
+  "description": "Small clearfixing utility for the inuitcss framework",
+  "main": "_trumps.clearfix.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inuitcss/trumps.clearfix.git"
+  },
+  "author": "Harry Roberts <harry@csswizardry.com>",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/inuitcss/trumps.clearfix/issues"
+  },
+  "homepage": "https://github.com/inuitcss/trumps.clearfix",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ]
+}

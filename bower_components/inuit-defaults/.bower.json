@@ -1,6 +1,6 @@
 {
   "name": "inuit-defaults",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/inuitcss/settings.defaults",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -13,13 +13,13 @@
     "css"
   ],
   "license": "Apache",
-  "_release": "0.2.2",
+  "_release": "0.2.3",
   "_resolution": {
     "type": "version",
-    "tag": "0.2.2",
-    "commit": "6587dc7d0b262aae60e56bafe397ca9512db496d"
+    "tag": "0.2.3",
+    "commit": "d2d964329e6be56f14d133c7f3bdf50f73c8573e"
   },
   "_source": "git://github.com/inuitcss/settings.defaults.git",
-  "_target": "0.2.2",
+  "_target": "~0.2.1",
   "_originalSource": "inuit-defaults"
 }

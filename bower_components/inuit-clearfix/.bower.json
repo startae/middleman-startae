@@ -1,6 +1,6 @@
 {
   "name": "inuit-clearfix",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/inuitcss/generic.clearfix",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -13,13 +13,13 @@
     "css"
   ],
   "license": "Apache",
-  "_release": "0.2.1",
+  "_release": "0.2.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.2.1",
-    "commit": "713e6121d204a12bd80621d1ac53e4f1eedba68f"
+    "tag": "0.2.2",
+    "commit": "a63f955f1b567f3cb7fd642dfb66d959ada43276"
   },
   "_source": "git://github.com/inuitcss/generic.clearfix.git",
-  "_target": "~0.2.1",
+  "_target": "~0.2.2",
   "_originalSource": "inuit-clearfix"
 }
