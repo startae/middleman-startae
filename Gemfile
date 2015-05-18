@@ -1,14 +1,11 @@
 source 'https://rubygems.org'
-# ruby '2.2.1'
+ruby '2.2.2'
 
 # HTTP server for Ruby/Rack recommended by Heroku
-gem 'puma', '~> 2.11.1'
+gem 'puma', '~> 2.11.2'
 
 # Middleman
-gem 'middleman', '~> 3.3.10'
-
-# Compress images in your Middleman project
-gem 'middleman-smusher', '~> 3.0.0'
+gem 'middleman', '~> 3.3.12'
 
 # LiveReload plugin
 gem 'middleman-livereload', '~> 3.4.2'
@@ -26,7 +23,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'slim', '~> 3.0.3'
 gem 'sass', '~> 3.4.13'
 gem 'compass', '~> 1.0.3' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
-gem 'coffee-script', '~> 2.3.0'
+gem 'coffee-script', '~> 2.4.1'
 
 # Generate fake data
 gem 'faker', '~> 1.4.3'
