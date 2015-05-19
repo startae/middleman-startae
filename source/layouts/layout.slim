@@ -1,10 +1,10 @@
 doctype html
-html.no-js class="#{data.page.page_class}" lang="#{I18n.locale}"
+html.no-js lang="#{I18n.locale}"
   head
-    = partial 'head'
+    = partial '/shared/head'
   body
-    = partial 'body_top'
-    = partial 'header'
+    = partial '/shared/body_top'
+    = partial '/shared/header'
     = yield
-    = partial 'footer'
-    = partial 'body_bottom'
+    = partial '/shared/footer'
+    = partial '/shared/body_bottom'

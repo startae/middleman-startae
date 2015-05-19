@@ -1,16 +1,16 @@
-meta name='description' content="#{page_description}"
-meta property='og:url' content="#{current_page_url}"
-meta property='og:title' content="#{page_title}"
-meta name='twitter:title' content="#{page_title}"
-- if data.page.thumb
-  meta property='og:image' content="#{site_url}/#{data.page.thumb}"
-  meta name='twitter:image:src' content="#{site_url}/#{data.page.thumb}"
-- else
-  meta property='og:image' content="#{site_url}#{image_path('og-image.png')}"
-  meta name='twitter:image:src' content="#{site_url}#{image_path('og-image.png')}"
-meta property='og:description' content="#{page_description}"
-meta name='twitter:site' content="#{site_twitter}"
-meta name='twitter:creator' content="#{site_name}"
-meta property='article:author ' content="#{site_name}"
-meta property='og:site_name' content="#{site_name}"
-meta name='twitter:card' content='summary_large_image'
+/ meta name='description' content="#{page_description}"
+/ meta property='og:url' content="#{current_page_url}"
+/ meta property='og:title' content="#{page_title}"
+/ meta name='twitter:title' content="#{page_title}"
+/ - if data.page.thumb
+/   meta property='og:image' content="#{site_url}/#{data.page.thumb}"
+/   meta name='twitter:image:src' content="#{site_url}/#{data.page.thumb}"
+/ - else
+/   meta property='og:image' content="#{site_url}#{image_path('og-image.png')}"
+/   meta name='twitter:image:src' content="#{site_url}#{image_path('og-image.png')}"
+/ meta property='og:description' content="#{page_description}"
+/ meta name='twitter:site' content="#{site_twitter}"
+/ meta name='twitter:creator' content="#{site_name}"
+/ meta property='article:author ' content="#{site_name}"
+/ meta property='og:site_name' content="#{site_name}"
+/ meta name='twitter:card' content='summary_large_image'
