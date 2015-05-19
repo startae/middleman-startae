@@ -2,13 +2,19 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 # HTTP server for Ruby/Rack recommended by Heroku
-gem 'puma', '~> 2.11.2'
+gem 'puma', '~> 2.11.3'
 
 # Middleman
-gem 'middleman', '~> 3.3.12'
+gem 'middleman', '~> 4.0.0.beta.2'
 
 # LiveReload plugin
 gem 'middleman-livereload', '~> 3.4.2'
+
+# Middleman Meta Tags
+gem 'middleman-meta-tags', '~> 0.1.3'
+
+# Middleman autoprefixer
+gem 'middleman-autoprefixer', '~> 2.4.3'
 
 # Rack Middleware and Utilities
 gem "rack-contrib"
