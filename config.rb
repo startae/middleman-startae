@@ -48,7 +48,6 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
-set :partials_dir, 'shared'
 
 
 # Other configurations
@@ -60,8 +59,13 @@ set :trailing_slash, false
 # ----------------------------------------------
 configure :development do
   activate :directory_indexes
+
   set :debug_assets, true
+
   ::Slim::Engine.set_options :pretty => true
+
+  # Activate autoprefixer
+  activate :autoprefixer
 end
 
 
@@ -85,4 +89,7 @@ configure :build do
 
   # Enable cache buster
   activate :cache_buster
+
+  # Activate autoprefixer
+  activate :autoprefixer
 end
