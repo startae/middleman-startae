@@ -4,11 +4,7 @@
 
 # Site Settings
 # ----------------------------------------------
-@google_analytics = ''
-set :site_name, 'Middleman Startaê'
-set :site_description, 'A Static Site Generator'
-set :site_url, 'http://middleman-startae.herokuapp.com'
-set :site_twitter, '@querostartae'
+@google_analytics = "UA-XXXXXXX-X"
 
 
 # Slim HTML
@@ -22,15 +18,10 @@ activate :i18n, :mount_at_root => :'pt-BR'
 
 
 # Livereload
-# Reload the browser automatically whenever files change
 # ----------------------------------------------
 configure :development do
   activate :livereload, :no_swf => true
 end
-
-
-# Page options, layouts, aliases and proxies
-# ----------------------------------------------
 
 
 # Bower Config
@@ -62,6 +53,7 @@ configure :development do
 
   set :debug_assets, true
 
+  # Output a pretty html
   ::Slim::Engine.set_options :pretty => true
 
   # Activate autoprefixer

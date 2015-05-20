@@ -7,13 +7,10 @@ gem 'puma', '~> 2.11.3'
 # Middleman
 gem 'middleman', '~> 4.0.0.beta.2'
 
-# LiveReload plugin
+# Middleman LiveReload
 gem 'middleman-livereload', '~> 3.4.2'
 
-# Middleman Meta Tags
-gem 'middleman-meta-tags', '~> 0.1.3'
-
-# Middleman autoprefixer
+# Middleman Autoprefixer
 gem 'middleman-autoprefixer', '~> 2.4.3'
 
 # Rack Middleware and Utilities
