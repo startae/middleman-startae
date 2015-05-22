@@ -8,7 +8,7 @@ This is a base [Middleman](http://middlemanapp.com) template application. This s
 * [Slim](http://slim-lang.com): A lightweight templating engine.
 * [Bower](http://bower.io): A package manager for the web.
 * [Sass](http://sass-lang.com): Sass: Syntactically Awesome Style Sheets
-* [Inuitcss](https://github.com/inuitcss/getting-started): jQuery is a fast, small, and feature-rich JavaScript library.
+* [Inuitcss](https://github.com/inuitcss/getting-started): inuitcss is a powerful, Sass-based, BEM, OOCSS framework designed with scalability and performance in mind.
 * [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass.
 * [Susy](http://susy.oddbird.net): Responsive layout toolkit for Sass.
 * [Coffeescript](http://coffeescript.org)
