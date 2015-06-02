@@ -3,15 +3,13 @@
   "version": "0.0.0",
   "private": "true",
   "authors": [
-    "Startaê <http://www.startae.com.br>",
-    "Renato Carvalho <renato@startae.com.br>"
+    "Startaê <http://www.startae.com>"
   ],
   "dependencies": {
     "bourbon": "~4.2.3",
     "susy": "~2.2.5",
     "fastclick": "~1.0.6",
     "enquire": "~2.1.2",
-    "jquery": "~2.1.4",
     "picturefill": "~3.0.0-alpha1",
     "inuit-defaults": "0.2.3",
     "inuit-functions": "0.2.0",
