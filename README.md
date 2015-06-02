@@ -12,7 +12,6 @@ This is a base [Middleman](http://middlemanapp.com) template application. This s
 * [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass.
 * [Susy](http://susy.oddbird.net): Responsive layout toolkit for Sass.
 * [Coffeescript](http://coffeescript.org)
-* [jQuery](http://jquery.com): jQuery is a fast, small, and feature-rich JavaScript library.
 * Language configuration
 * Gzip
 * Faker (Fake content generator with several helpers predefined)
