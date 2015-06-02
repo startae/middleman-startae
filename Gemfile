@@ -5,16 +5,16 @@ ruby '2.2.2'
 gem 'puma', '~> 2.11.3'
 
 # Middleman
-gem 'middleman', '~> 3.3.11'
+gem 'middleman', '~> 3.3.12'
 
 # Middleman LiveReload
 gem 'middleman-livereload', '~> 3.4.2'
 
 # Middleman Autoprefixer
-gem 'middleman-autoprefixer', '~> 2.4.3'
+gem 'middleman-autoprefixer', '~> 2.4.4'
 
 # Rack Middleware and Utilities
-gem "rack-contrib"
+gem 'rack-contrib', '~> 1.2.0'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
@@ -24,7 +24,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Precompilers
 gem 'slim', '~> 3.0.3'
-gem 'sass', '~> 3.4.13'
+gem 'sass', '~> 3.4.14'
 gem 'compass', '~> 1.0.3' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
 gem 'coffee-script', '~> 2.4.1'
 
