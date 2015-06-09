@@ -1,6 +1,7 @@
-## Middleman with Slim, Sass, Inuitcss, Bourbon, Susy, Bower and more.
+# Middleman Startaê
 
-This is a base [Middleman](http://middlemanapp.com) template application. This sets all of the defaults that I'll generally set when building a new application on Middleman. Be sure to read all of the documentation to become familiar with Middleman before using this base setup.
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://www.startae.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://www.startae.com)
 
 **Features:**
 * Ready to run on [Heroku](http://www.heroku.com)

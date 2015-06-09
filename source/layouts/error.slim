@@ -1,0 +1,8 @@
+doctype html
+html.no-js lang="#{I18n.locale}"
+  head
+    = partial '/shared/head'
+  body
+    = partial '/shared/body_top'
+    = yield
+    = partial '/shared/body_bottom'
