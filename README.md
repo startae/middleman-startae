@@ -1,7 +1,7 @@
 # Middleman Startaê
 
-[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://www.startae.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://www.startae.com)
 
 **Features:**
 * Ready to run on [Heroku](http://www.heroku.com)
