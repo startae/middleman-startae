@@ -22,10 +22,37 @@
 
 ## Installation
 
-### Instalation using Middleman
-1. Download or clone this repository to: `git clone git://github.com/startae/middleman-startae.git ~/.middleman/middleman-startae`
-2. Create your new Middleman project with: `middleman init my_new_project --template=middleman-startae`
-3. Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower npm package installed: `npm install -g bower`)
+### Basic installation
+
+Start by installing [Bundler](http://gembundler.com/), if you don't already have it:
+
+```
+gem install bundler
+```
+
+Then just clone the repository down to your local machine:
+
+```
+git clone http://github.com/startae/middleman-startae.git my_new_project
+```
+
+Finally, do a ```bundle install``` to install the required gems -- even Middleman itself!
+
+Use ```middleman``` to do your live development and ```middleman build``` to render your static file output to the ```/build/``` directory.
+
+For full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
+
+### Middleman Template
+
+Middleman supports project templates. To use ```Middleman Startaê``` as a template, clone the Git repository into ```~/.middleman```, like so:
+
+```git clone git://github.com/startae/middleman-startae.git ~/.middleman/middleman-startae```
+
+then use the new template argument for the ```middleman init``` command:
+
+```middleman init my_new_project --template=middleman-startae```
+
+Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower package installed: `npm install -g bower`)
 
 ## Build & Dependency Status
 
@@ -35,9 +62,10 @@
 
 ## Comments & Suggestions?
 
-Just submit an [issue](https://github.com/startae/middleman-startae/issues). Cheers!
+Just submit an [issue](https://github.com/startae/middleman-startae/issues).
 
-
-For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/).
+For more help follow [Middleman's docs](https://middlemanapp.com/basics/install/).
 
 [Middleman](http://middlemanapp.com/) is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.
+
+Cheers!
