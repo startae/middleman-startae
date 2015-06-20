@@ -4,7 +4,7 @@ def copyright_years(start_year)
   if start_year == end_year
     start_year.to_s
   else
-    start_year.to_s + '-' + end_year.to_s
+    start_year.to_s + '–' + end_year.to_s
   end
 end
 
