@@ -11,7 +11,7 @@ gem 'middleman', '~> 3.3.12'
 gem 'middleman-livereload', '~> 3.4.2'
 
 # Middleman Autoprefixer
-gem 'middleman-autoprefixer', '~> 2.4.4'
+gem 'middleman-autoprefixer', '~> 2.5.0'
 
 # Rack Middleware and Utilities
 gem 'rack-contrib', '~> 1.2.0'
