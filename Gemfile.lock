@@ -10,7 +10,7 @@ GEM
     autoprefixer-rails (5.2.1.1)
       execjs
       json
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     chunky_png (1.3.4)
     coffee-script (2.4.1)
@@ -42,7 +42,7 @@ GEM
     haml (4.0.7)
       tilt
     hike (1.2.3)
-    hitimes (1.2.2)
+    hitimes (1.2.3)
     hooks (0.4.0)
       uber (~> 0.0.4)
     http_parser.rb (0.6.0)
@@ -126,7 +126,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    timers (4.0.1)
+    timers (4.0.4)
       hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -151,3 +151,6 @@ DEPENDENCIES
   slim (~> 3.0.6)
   tzinfo-data
   wdm (~> 0.1.1)
+
+BUNDLED WITH
+   1.10.6
