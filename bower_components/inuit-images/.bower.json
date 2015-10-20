@@ -20,6 +20,6 @@
     "commit": "c45dcfb390a0ad3dfaf395fc39e41fb7b18cd887"
   },
   "_source": "git://github.com/inuitcss/base.images.git",
-  "_target": "~0.3.3",
+  "_target": "0.3.3",
   "_originalSource": "inuit-images"
 }

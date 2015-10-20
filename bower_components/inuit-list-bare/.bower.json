@@ -23,6 +23,6 @@
     "commit": "189217ef44936ef4a2119dceef13561cc8a7704f"
   },
   "_source": "git://github.com/inuitcss/objects.list-bare.git",
-  "_target": "~0.3.0",
+  "_target": "0.3.0",
   "_originalSource": "inuit-list-bare"
 }

@@ -25,6 +25,6 @@
     "commit": "cdbaca1ae766de06caa619e0ab75592bc11fc394"
   },
   "_source": "git://github.com/inuitcss/objects.media.git",
-  "_target": "~0.4.2",
+  "_target": "0.4.2",
   "_originalSource": "inuit-media"
 }

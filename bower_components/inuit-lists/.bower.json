@@ -9,6 +9,6 @@
     "commit": "2113f7dc786041a37dce0c4835f7ccf800c2479e"
   },
   "_source": "git://github.com/inuitcss/base.lists.git",
-  "_target": "~0.1.0",
+  "_target": "0.1.0",
   "_originalSource": "inuit-lists"
 }

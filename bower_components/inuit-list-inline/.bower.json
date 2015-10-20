@@ -23,6 +23,6 @@
     "commit": "33290e7973c770324c99064cf49da51fa946785c"
   },
   "_source": "git://github.com/inuitcss/objects.list-inline.git",
-  "_target": "~0.3.2",
+  "_target": "0.3.2",
   "_originalSource": "inuit-list-inline"
 }

@@ -24,6 +24,6 @@
     "commit": "00030ff43646010208b94be1445cbea1eb8047c4"
   },
   "_source": "git://github.com/inuitcss/trumps.spacing.git",
-  "_target": "~0.7.0",
+  "_target": "0.7.0",
   "_originalSource": "inuit-spacing"
 }
