@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 # HTTP server for Ruby/Rack recommended by Heroku
-gem 'puma', '2.14.0'
+gem 'puma', '2.15.3'
 
 # Middleman
-gem 'middleman', '3.4.0'
+gem 'middleman', '3.4.1'
 
 # Middleman LiveReload
-gem 'middleman-livereload', '3.4.3'
+gem 'middleman-livereload', '3.4.4'
 
 # Middleman Autoprefixer
 gem 'middleman-autoprefixer', '2.6.1'
@@ -24,9 +24,9 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Precompilers
 gem 'slim', '3.0.6'
-gem 'sass', '3.4.19'
+gem 'sass', '3.4.20'
 gem 'compass', '1.0.3' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
 gem 'coffee-script', '2.4.1'
 
 # Generate fake data
-gem 'faker', '1.5.0'
+gem 'faker', '1.6.1'
