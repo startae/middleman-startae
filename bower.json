@@ -6,7 +6,7 @@
     "Startaê <http://www.startae.com>"
   ],
   "dependencies": {
-    "susy": "2.2.6",
+    "susy": "2.2.7",
     "fastclick": "1.0.6",
     "enquire": "2.1.2",
     "picturefill": "3.0.1",

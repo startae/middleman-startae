@@ -2,7 +2,7 @@
   "name": "susy",
   "description": "Sass power-tools for web layout.",
   "authors": [
-    "Eric Suzanne <eric@oddbird.net>"
+    "Miriam Eric Suzanne <miriam@oddbird.net>"
   ],
   "main": "sass/_susy.scss",
   "homepage": "http://susy.oddbird.net",
@@ -23,17 +23,14 @@
     "*.json",
     "*.gemspec"
   ],
-  "devDependencies": {
-    "true": "2.0.0.alpha.3"
-  },
-  "version": "2.2.6",
-  "_release": "2.2.6",
+  "version": "2.2.7",
+  "_release": "2.2.7",
   "_resolution": {
     "type": "version",
-    "tag": "2.2.6",
-    "commit": "c987b96e275674e120072ac6ffc9cd600709943a"
+    "tag": "2.2.7",
+    "commit": "21af422076ac6446a27c58e44fb525cb4a16c4f8"
   },
   "_source": "git://github.com/ericam/susy.git",
-  "_target": "2.2.6",
+  "_target": "2.2.7",
   "_originalSource": "susy"
 }
