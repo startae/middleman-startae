@@ -27,6 +27,7 @@
     "inuit-images": "0.3.3",
     "inuit-spacing": "0.7.0",
     "inuit-flag": "0.3.2",
-    "inuit-list-inline": "0.3.2"
+    "inuit-list-inline": "0.3.2",
+    "hagrid": "^3.0.0"
   }
 }
