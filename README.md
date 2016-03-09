@@ -10,8 +10,7 @@
 * [Bower](http://bower.io): A package manager for the web.
 * [Sass](http://sass-lang.com): Sass: Syntactically Awesome Style Sheets
 * [Inuitcss](https://github.com/inuitcss/getting-started): inuitcss is a powerful, Sass-based, BEM, OOCSS framework designed with scalability and performance in mind.
-* [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass.
-* [Susy](http://susy.oddbird.net): Responsive layout toolkit for Sass.
+* [Hagrid](https://github.com/fspoettel/hagrid): Simple but powerful flexbox-first grid
 * [Coffeescript](http://coffeescript.org)
 * Language configuration
 * Gzip
