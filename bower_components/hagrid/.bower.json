@@ -1,0 +1,33 @@
+{
+  "name": "hagrid",
+  "version": "3.0.0",
+  "authors": [
+    "felics <hi@felics.me>"
+  ],
+  "description": "Elegant, mixin-based flexbox SCSS Grid",
+  "main": "scss/_hagrid.scss",
+  "keywords": [
+    "scss",
+    "grid",
+    "flexbox"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/felics/hagrid.git",
+  "ignore": [
+    "node_modules",
+    "__test__",
+    "gulpfile.js",
+    "package.json",
+    ".editorconfig"
+  ],
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "6bd3c67e77c6af2400022cec3a7d65ff68a21299"
+  },
+  "_source": "git://github.com/felics/hagrid.git",
+  "_target": "^3.0.0",
+  "_originalSource": "hagrid",
+  "_direct": true
+}
