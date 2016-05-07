@@ -1,9 +1,7 @@
 @charset "utf-8"
-// --------------------------------------
-//
-//  APPLICATION
-//
-// --------------------------------------
+////
+/// @APPLICATION
+////
 
 // 0. Requirements -- Vendor libraries
 // 1. Settings ------ Sass vars, etc.
@@ -26,12 +24,14 @@ $hagrid-gutters: (default: 40px, full: 0, narrow: 30px, wide: 50px)
 @import "settings/settings.global"
 @import "settings/settings.fonts"
 @import "settings/settings.colors"
+@import "settings/settings.motion"
 
 // [2] Tools
 @import "inuit-functions/tools.functions"
-@import "inuit-mixins/tools.mixins"
-@import "tools/tools.mixins"
+@import "tools/tools.attention"
 @import "tools/tools.intrinsic-ratio"
+@import "tools/tools.ellipsis"
+@import "tools/tools.motion"
 
 // [3] Generic
 @import "inuit-normalize/generic.normalize"
