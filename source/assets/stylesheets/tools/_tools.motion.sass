@@ -1,0 +1,28 @@
+////
+/// @TOOLS -> MOTION
+////
+
+=duration-instantly
+  transition-duration: $duration-instantly
+
+=duration-immediately
+  transition-duration: $duration-immediately
+
+=duration-quickly
+  transition-duration: $duration-quickly
+
+=duration-promptly
+  transition-duration: $duration-promptly
+
+=duration-slowly
+  transition-duration: $duration-slowly
+
+=duration-paused
+  transition-duration: $duration-paused
+
+=keyframes($name)
+  @keyframes #{$name}
+    @content
+
+=animation($param)
+  animation: $param
