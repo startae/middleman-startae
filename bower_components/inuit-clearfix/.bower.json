@@ -19,7 +19,7 @@
     "tag": "0.2.2",
     "commit": "a63f955f1b567f3cb7fd642dfb66d959ada43276"
   },
-  "_source": "git://github.com/inuitcss/generic.clearfix.git",
+  "_source": "https://github.com/inuitcss/generic.clearfix.git",
   "_target": "0.2.2",
   "_originalSource": "inuit-clearfix"
 }

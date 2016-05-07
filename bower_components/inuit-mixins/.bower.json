@@ -22,7 +22,7 @@
     "tag": "0.2.3",
     "commit": "c46b08c26f5e771e303754e05fdbb7227bd83abb"
   },
-  "_source": "git://github.com/inuitcss/tools.mixins.git",
+  "_source": "https://github.com/inuitcss/tools.mixins.git",
   "_target": "0.2.3",
   "_originalSource": "inuit-mixins"
 }

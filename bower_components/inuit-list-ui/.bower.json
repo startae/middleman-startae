@@ -23,7 +23,7 @@
     "tag": "0.4.1",
     "commit": "6363e9ee650ea5ff5c4d39006013078bee69dcd3"
   },
-  "_source": "git://github.com/inuitcss/objects.list-ui.git",
+  "_source": "https://github.com/inuitcss/objects.list-ui.git",
   "_target": "0.4.1",
   "_originalSource": "inuit-list-ui"
 }

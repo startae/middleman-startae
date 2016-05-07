@@ -19,7 +19,7 @@
     "tag": "0.2.3",
     "commit": "d2d964329e6be56f14d133c7f3bdf50f73c8573e"
   },
-  "_source": "git://github.com/inuitcss/settings.defaults.git",
+  "_source": "https://github.com/inuitcss/settings.defaults.git",
   "_target": "0.2.3",
   "_originalSource": "inuit-defaults"
 }

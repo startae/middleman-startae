@@ -30,14 +30,14 @@
     "examples",
     "perf-test"
   ],
-  "version": "3.0.1",
-  "_release": "3.0.1",
+  "version": "3.0.2",
+  "_release": "3.0.2",
   "_resolution": {
     "type": "version",
-    "tag": "3.0.1",
-    "commit": "87597fca6842c7df9e4f16da3ffda89ccf2351b6"
+    "tag": "3.0.2",
+    "commit": "6d4062fe0a663167080b50f7665cdb26874f7510"
   },
-  "_source": "git://github.com/scottjehl/picturefill.git",
-  "_target": "3.0.1",
+  "_source": "https://github.com/scottjehl/picturefill.git",
+  "_target": "3.0.2",
   "_originalSource": "picturefill"
 }

@@ -22,7 +22,7 @@
     "tag": "0.2.1",
     "commit": "b99e091041530050a7531b68e010ba1a0ac98a0b"
   },
-  "_source": "git://github.com/inuitcss/base.page.git",
+  "_source": "https://github.com/inuitcss/base.page.git",
   "_target": "0.2.1",
   "_originalSource": "inuit-page"
 }
