@@ -19,7 +19,7 @@
     "tag": "0.2.0",
     "commit": "719b9f9f2d8537e63d232fc796c02802a6078e94"
   },
-  "_source": "git://github.com/inuitcss/tools.functions.git",
+  "_source": "https://github.com/inuitcss/tools.functions.git",
   "_target": "0.2.0",
   "_originalSource": "inuit-functions"
 }

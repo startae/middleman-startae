@@ -19,7 +19,7 @@
     "tag": "0.1.1",
     "commit": "20b76c5c5c6c1e267b81008e03dc793a10b9e652"
   },
-  "_source": "git://github.com/inuitcss/generic.reset.git",
+  "_source": "https://github.com/inuitcss/generic.reset.git",
   "_target": "0.1.1",
   "_originalSource": "inuit-reset"
 }

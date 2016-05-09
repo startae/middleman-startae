@@ -19,7 +19,7 @@
     "tag": "0.2.0",
     "commit": "57c52f13e516762bb4e332e7cbaa516723fb1d84"
   },
-  "_source": "git://github.com/inuitcss/generic.box-sizing.git",
+  "_source": "https://github.com/inuitcss/generic.box-sizing.git",
   "_target": "0.2.0",
   "_originalSource": "inuit-box-sizing"
 }

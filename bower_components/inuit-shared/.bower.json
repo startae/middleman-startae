@@ -22,7 +22,7 @@
     "tag": "0.1.5",
     "commit": "a462e276ca3ddc197aa5f7d3b12ee9883d777d4d"
   },
-  "_source": "git://github.com/inuitcss/generic.shared.git",
+  "_source": "https://github.com/inuitcss/generic.shared.git",
   "_target": "0.1.5",
   "_originalSource": "inuit-shared"
 }

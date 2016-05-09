@@ -23,7 +23,7 @@
     "tag": "0.4.2",
     "commit": "09182ec03879336a7eb800bcdaa6cc39f8612df3"
   },
-  "_source": "git://github.com/inuitcss/objects.buttons.git",
+  "_source": "https://github.com/inuitcss/objects.buttons.git",
   "_target": "0.4.2",
   "_originalSource": "inuit-buttons"
 }

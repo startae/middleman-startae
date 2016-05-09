@@ -8,10 +8,10 @@ def copyright_years(start_year)
   end
 end
 
+# Current Year
 def current_year
   Time.now.year
 end
-
 
 # Faker helpers
 def random_name

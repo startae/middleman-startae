@@ -23,7 +23,7 @@
     "tag": "0.4.2",
     "commit": "54b551cfeb872ba43fae52c494a8adde808cc4f6"
   },
-  "_source": "git://github.com/inuitcss/objects.list-block.git",
+  "_source": "https://github.com/inuitcss/objects.list-block.git",
   "_target": "0.4.2",
   "_originalSource": "inuit-list-block"
 }
