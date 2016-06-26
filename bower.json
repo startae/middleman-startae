@@ -13,7 +13,7 @@
     "inuit-functions": "0.2.0",
     "inuit-mixins": "0.2.3",
     "inuit-box-sizing": "0.2.0",
-    "inuit-normalize": "3.0.3",
+    "inuit-normalize": "4.1.1",
     "inuit-page": "0.2.1",
     "inuit-shared": "0.1.5",
     "inuit-reset": "0.1.1",
@@ -28,6 +28,6 @@
     "inuit-spacing": "0.7.0",
     "inuit-flag": "0.3.2",
     "inuit-list-inline": "0.3.2",
-    "hagrid": "3.0.0"
+    "hagrid": "3.1.0"
   }
 }

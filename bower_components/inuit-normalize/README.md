@@ -1,6 +1,6 @@
-# normalize.css v3.0.3
+# normalize.css v4.1.1
 
-The `normalize.css` module is an exact clone of normalize.css at version v3.0.3.
+The `normalize.css` module is an exact clone of normalize.css at version v4.1.1.
 normalize.css <q>makes browsers render all elements more consistently and in
 line with modern standards</q>. It is developed and maintained by [Nicolas
 Gallagher](https://twitter.com/necolas).
