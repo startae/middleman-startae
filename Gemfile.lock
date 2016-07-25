@@ -38,8 +38,6 @@ GEM
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.7.0)
-    faker (1.6.3)
-      i18n (~> 0.5)
     ffi (1.9.10)
     git-version-bump (0.15.1)
     haml (4.0.7)
@@ -154,7 +152,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-script (= 2.4.1)
   compass (= 1.0.3)
-  faker (= 1.6.3)
   middleman (= 3.4.1)
   middleman-autoprefixer (= 2.7.0)
   middleman-livereload (= 3.4.6)
