@@ -27,8 +27,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Precompilers
 gem 'slim', '3.0.7'
-gem 'sassc', '1.10.0'
-gem 'compass', '1.0.3' # Using compass temporarily so we can have sass 3.3, remove this when Middleman without compass dependency is released
 gem 'coffee-script', '2.4.1'
 
 # Generate fake data
