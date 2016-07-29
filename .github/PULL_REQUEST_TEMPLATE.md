@@ -17,4 +17,4 @@
 ##### Demo
 - [Insert screenshots, screencasts or gifs] here
 
-Please review @vpsinc/frontend-team
+Please review it, @startae/frontend-team.
