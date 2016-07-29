@@ -21,12 +21,10 @@ end
 
 # Bower Config
 # ----------------------------------------------
-after_configuration do
-  activate :sprockets
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-  sprockets.append_path @bower_assets_path
-end
+activate :sprockets
+@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+@bower_assets_path = File.join "#{root}", @bower_config["directory"]
+sprockets.append_path @bower_assets_path
 
 # Configure assets directories
 # ----------------------------------------------
