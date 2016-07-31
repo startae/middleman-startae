@@ -28,6 +28,3 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 # Precompilers
 gem 'slim', '3.0.7'
 gem 'coffee-script', '2.4.1'
-
-# Generate fake data
-gem 'faker', '1.6.3'
