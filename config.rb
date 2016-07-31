@@ -37,6 +37,10 @@ set :fonts_dir, 'assets/fonts'
 # ----------------------------------------------
 set :trailing_slash, false
 
+# Sitemap
+# ----------------------------------------------
+page "/sitemap.xml", :layout => false
+
 # Development-specific configuration
 # ----------------------------------------------
 configure :development do
