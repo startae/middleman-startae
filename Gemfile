@@ -5,16 +5,16 @@ ruby '2.2.3'
 gem 'puma', '3.4.0'
 
 # Middleman
-gem 'middleman', '4.1.10'
+gem 'middleman', '4.1.11'
 
 # Middleman Sprockets
-gem "middleman-sprockets", "~> 4.0.0"
+gem "middleman-sprockets", "~> 4.1.0"
 
 # Middleman LiveReload
 gem 'middleman-livereload', '3.4.6'
 
 # Middleman Autoprefixer
-gem 'middleman-autoprefixer', '2.7.0'
+gem 'middleman-autoprefixer', '2.7.1'
 
 # Rack Middleware and Utilities
 gem 'rack-contrib', '1.4.0'
