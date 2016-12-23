@@ -1,16 +1,78 @@
-////
-/// @SETTINGS -> FONTS
-////
+/// @group settings
+/// @name fonts
 
-// -------------------------------------
-//   Font Sizes
-// -------------------------------------
+// Font Sizes
 $inuit-base-font-size:   16px
 $inuit-base-line-height: 24px
 
-// -------------------------------------
-//   Font Families
-// -------------------------------------
-$sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
+// Font Families
+$sans-serif: "soleil", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
 $serif: Georgia, Cambria, "Times New Roman", Times, serif
 $monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace
+
+// Soleil
+// These are the font-weights enabled on Typekit:
+=font-soleil($weight: "", $style: "")
+  font-family: "soleil", $sans-serif
+
+  @if $weight == book
+    font-weight: 100
+  @else if $weight == semibold
+    font-weight: 400
+  @else if $weight == bold
+    font-weight: 600
+  @else if $weight == extrabold
+    font-weight: 700
+  @else
+    font-weight: 400
+
+  @if $style == italic
+    font-style: italic
+  @else
+    font-style: normal
+
+// Stevie Sans
+// These are the font-weights enabled on Typekit:
+=font-stevie($weight: "", $style: "")
+  font-family: "stevie-sans", $sans-serif
+
+  @if $weight == thin
+    font-weight: 200
+  @if $weight == light
+    font-weight: 300
+  @else if $weight == book
+    font-weight: 400
+  @else if $weight == regular
+    font-weight: 500
+  @else if $weight == medium
+    font-weight: 600
+  @else if $weight == bold
+    font-weight: 700
+  @else if $weight == black
+    font-weight: 900
+  @else
+    font-weight: 300
+
+  @if $style == italic
+    font-style: italic
+  @else
+    font-style: normal
+
+// TypeKit classes to avoid flash of unstyled text (FOUT)
+// Apply styles to use when web fonts are loading
+.wf-loading .title,
+.wf-loading .nav__option,
+.wf-loading .item__title,
+.wf-loading .item__description,
+.wf-loading .btn,
+.wf-loading .blogpost-meta,
+.wf-loading .hero__title,
+.wf-loading .blogpost,
+.wf-loading .box__title,
+.wf-loading .box__paragraph,
+.wf-loading .box__subtitle,
+.wf-loading .project__title,
+.wf-loading .project__description,
+.wf-loading .project__subtitle,
+.wf-loading .project__what-we-did
+  visibility: hidden

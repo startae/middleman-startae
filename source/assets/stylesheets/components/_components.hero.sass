@@ -1,0 +1,71 @@
+////
+/// @COMPONENTS -> HERO
+////
+
+.hero
+  padding-top: 180px
+  padding-bottom: 75px
+
+  +bp(lg)
+    padding-top: 220px
+
+  +bp(xl)
+    padding-top: 150px
+    padding-bottom: 150px
+
+.logo
+  +replace()
+  position: absolute
+  left: 15px
+  top: 30px
+  background: url(../images/logo.svg)
+  background-size: contain
+  width: 110px
+  height: 24px
+  cursor: pointer
+
+  +bp(md)
+    left: 30px
+
+.title--hero
+  margin-bottom: 40px
+  max-width: 900px
+
+  +bp(sm)
+    font-size: 66px
+
+  +bp(md)
+    font-size: 92px
+    line-height: 1
+    margin-bottom: 50px
+
+  +bp(lg)
+    font-size: 110px
+
+  +bp(xl)
+    font-size: 120px
+    max-width: 1200px
+
+  span
+    font-size: 100px
+    line-height: 1
+    color: $color-red
+    display: inline-block
+    width: 100%
+
+    +bp(sm)
+      font-size: 120px
+
+    +bp(md)
+      font-size: 160px
+
+    +bp(xl)
+      font-size: 180px
+
+.title--hero-secondary
+  font-family: "stevie-sans", sans-serif
+  font-size: 16px
+  font-weight: 400
+
+  +bp(md)
+    font-size: 20px

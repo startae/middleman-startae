@@ -1,0 +1,56 @@
+////
+/// @COMPONENTS -> EVENT
+////
+
+.event
+  margin-bottom: 75px
+
+  +bp(md)
+    display: flex
+    align-items: center
+
+  +bp(md)
+    &:nth-child(odd)
+      flex-direction: row-reverse
+
+      .event__title
+        margin-left: 0
+        padding-left: 50px
+        margin-right: -200px
+        width: 800px
+
+  +bp(xl)
+    max-width: 1280px
+
+.event__thumb
+  +i(7/12 md)
+
+.event__info
+  +i(5/12 md)
+  padding: 0 15px
+
+.event__title
+  margin-top: -45px
+  +bp(sm)
+    font-size: 52px
+    margin-top: -65px
+  +bp(md)
+    margin-top: 0
+    margin-left: -75px
+    padding-right: 50px
+  +bp(lg)
+    font-size: 60px
+    margin-left: -200px
+
+.event__description
+  font-family: "stevie-sans", sans-serif
+  font-size: 15px
+  font-weight: 400
+
+.event__link
+  text-transform: uppercase
+  color: $color-red
+  font-size: 14px
+  letter-spacing: 0.15em
+  &:hover
+    color: $color-pre

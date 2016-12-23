@@ -1,5 +1,5 @@
 meta charset='utf-8'
-title Middleman Startaê
+title 2016 - A Year in Review
 = stylesheet_link_tag 'application.css', media: 'all'
 link rel='dns-prefetch' href='//cdnjs.cloudflare.com'
 link rel='dns-prefetch' href='//www.google-analytics.com'
@@ -9,6 +9,19 @@ meta http-equiv='X-UA-Compatible' content='IE=edge'
 meta content='on' http-equiv='cleartype'
 meta content='True' name='HandheldFriendly'
 meta content='320' name='MobileOptimized'
+javascript:
+  (function(d) {
+    var config = {
+      kitId: 'jog0vhi',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+/[if lt IE 9]
+  = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'
+  = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'
+
 / -------------------------------------
 / Modernizr - Development version
 / This is the Development version. Remember to use

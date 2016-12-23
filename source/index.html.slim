@@ -1,5 +1,24 @@
-.row
-  .container
-    h1 Middleman Startaê — It just works!
-    p A Middleman template with Sass, Slim, Hagrid, Coffeescript, Bower and more…
-    a.btn.btn--primary href='https://github.com/startae/middleman-startae' See the Github project
+.hero
+  .container.container--hero
+    h1.title.title--hero <span>2016</span> was a great year, here's why
+    h2.title.title--hero-secondary Scroll to see what happened
+
+.section
+  - data.events.each do |event|
+    - unless event.type
+      .container.event
+        .event__thumb
+          = image_tag("#{event.title.parameterize}.jpg", class: 'thumb', alt: 'Yummmy')
+        .event__info
+          h2.event__title = event.title
+          p.event__description = event.description
+          - if event.link
+            a.event__link href=event.link target="_blank" See Project
+    - else
+      .container.container--overall
+        .overall.event
+          .overall__icon class="overall__icon--#{event.icon}"
+          h2.overall__title = event.title
+          p.overall__description = event.description
+      .overall--order
+

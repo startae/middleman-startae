@@ -1,0 +1,63 @@
+////
+/// @COMPONENTS -> OVERALL
+////
+
+.overall
+  position: relative
+  padding: 60px 30px
+  background: transparent
+  border: 10px solid $color-pre
+  text-align: center
+  margin-bottom: 75px
+  z-index: 10
+
+  +bp(md)
+    display: block
+    padding: 160px 30px
+    border: 12px solid $color-pre
+
+  +bp(lg)
+    margin-top: -150px
+    margin-bottom: -75px
+
+  +bp(xl)
+    padding: 200px 30px
+
+.overall__icon
+  +replace()
+  margin: 0 auto 20px auto
+  background-size: contain
+  cursor: pointer
+
+.overall__icon--playlist
+  width: 65px
+  height: 65px
+  background-image: url(../images/icon-playlist--light.svg)
+
+.overall__icon--coffee
+  width: 65px
+  height: 64px
+  background-image: url(../images/icon-coffee--light.svg)
+
+.overall__title
+  font-size: 60px
+  line-height: 1
+  margin-bottom: 10px
+  color: $color-red
+
+  +bp(sm)
+    font-size: 100px
+
+  +bp(md)
+    font-size: 140px
+    line-height: 1
+
+  +bp(xl)
+    font-size: 160px
+
+.overall__description
+  margin-bottom: 0
+
+  +bp(md)
+    font-size: 30px
+    color: $color-pre
