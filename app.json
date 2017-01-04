@@ -1,0 +1,7 @@
+{
+  "name": "Middleman Startae",
+  "description": "A starter template ready to run on Heroku",
+  "repository": "https://github.com/startae/middleman-startae",
+  "logo": "http://torspark.com/img/middleman-logo.png",
+  "keywords": ["middleman", "ruby", "static"]
+}
