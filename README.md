@@ -3,6 +3,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://www.startae.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://www.startae.com)
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/startae/middleman-startae/tree/master)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/startae/middleman-startae)
 
 **Features:**
