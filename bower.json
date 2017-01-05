@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": "true",
   "authors": [
-    "Startaê <http://www.startae.com>"
+    "Startaê <https://www.startae.com>"
   ],
   "dependencies": {
     "fastclick": "1.0.6",
