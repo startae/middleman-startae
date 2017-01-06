@@ -17,7 +17,6 @@
 * [Coffeescript](http://coffeescript.org)
 * Language configuration
 * Gzip
-* Faker (Fake content generator with several helpers predefined)
 * Preconfigured partials
 * Metatags helper
 
