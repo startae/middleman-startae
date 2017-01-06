@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 # HTTP server for Ruby/Rack recommended by Heroku
-gem 'puma', '3.4.0'
+gem 'puma', '3.6.2'
 
 # Middleman
-gem 'middleman', '4.1.11'
+gem 'middleman', '4.2.0'
 
 # Middleman Sprockets
 gem "middleman-sprockets", "~> 4.1.0"
