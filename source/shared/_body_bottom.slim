@@ -1,6 +1,6 @@
 = partial '/shared/analytics'
-= javascript_include_tag 'requirements'
-= javascript_include_tag 'application'
+= javascript_include_tag 'requirements', defer: true
+= javascript_include_tag 'application', defer: true
 
 /[if lt IE 9]
   = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.3.6/nwmatcher.min.js'
