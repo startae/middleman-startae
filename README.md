@@ -45,7 +45,15 @@ For full Middleman documentation, visit the [Middleman website](http://middleman
 
 ### Middleman Template
 
-Middleman supports project templates. To use ```Middleman Startaê``` as a template, just pass the `startae/middleman-startae` to the init command.
+Middleman supports project templates. To use ```Middleman Startaê``` as a template, just follow these steps:
+
+First install the middleman gem, se you can use the middleman command:
+
+```
+gem install middleman
+```
+
+Now you just have to pass the `startae/middleman-startae` to the init command.
 
 ```
 middleman init my_new_project --template=startae/middleman-startae
