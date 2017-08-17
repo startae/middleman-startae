@@ -1,0 +1,29 @@
+{
+  "name": "middleman-startae",
+  "version": "1.0.0",
+  "description": "[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://www.startae.com) [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://www.startae.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/startae/middleman-startae.git"
+  },
+  "author": "Startae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/startae/middleman-startae/issues"
+  },
+  "homepage": "https://github.com/startae/middleman-startae#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "fastclick": "^1.0.6"
+  }
+}
