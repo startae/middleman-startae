@@ -19,13 +19,6 @@ configure :development do
   activate :livereload, :no_swf => true
 end
 
-# Bower Config
-# ----------------------------------------------
-activate :sprockets
-@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-@bower_assets_path = File.join "#{root}", @bower_config["directory"]
-sprockets.append_path @bower_assets_path
-
 # Configure assets directories
 # ----------------------------------------------
 set :css_dir, 'assets/stylesheets'
