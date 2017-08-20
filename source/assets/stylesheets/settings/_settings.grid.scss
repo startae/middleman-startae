@@ -1,0 +1,12 @@
+/// @group settings
+/// @name grid
+
+$hagrid-breakpoints:
+  (
+    sm: "(min-width: 35.5em)",
+    sm-only: "(max-width: 48.9999em)",
+    md: "(min-width: 49em)",
+    md-only: "(max-width: 63.9999em)",
+    lg: "(min-width: 64em)",
+    xl: "(min-width: 80em)"
+  );
