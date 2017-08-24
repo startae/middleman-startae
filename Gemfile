@@ -22,5 +22,8 @@ gem 'wdm', '0.1.1', :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
+# Manage ITCSS structure
+gem 'itcsscli', '~> 0.1.14'
+
 # Precompilers
 gem 'slim', '3.0.8'
