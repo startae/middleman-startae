@@ -1,0 +1,38 @@
+////
+/// @BASE -> TYPE
+/// Typographical base selectors.
+////
+
+// Emboldened elements.
+strong, b, dt
+  font-weight: bold
+
+// Code-like elements.
+code, kbd, samp
+  color: $color-code
+  font-family: $monospace
+
+pre
+  white-space: pre
+  word-wrap: normal
+  overflow: auto
+  // padding: $inuit-base-spacing-unit--small
+  background-color: $color-pre-background
+  border-radius: $base-radius
+
+  &,
+  code, kbd, samp
+    color: $color-pre
+
+// Horizontal rules.
+hr
+  border: none
+  border-bottom: 1px solid $color-gray-ui
+  // margin-bottom: $inuit-base-spacing-unit - 1px
+
+// Highlighted text.
+mark
+  pre &
+    background: none
+    border-bottom: 1px solid
+    color: inherit
