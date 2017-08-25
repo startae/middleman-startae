@@ -1,3 +1,5 @@
+import 'application.css.sass'
+
 const FastClick = require('fastclick');
 
 if ('addEventListener' in document) {
