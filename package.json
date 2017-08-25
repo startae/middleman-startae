@@ -4,7 +4,8 @@
   "description": "[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://www.startae.com) [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://www.startae.com)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --watch -d --color",
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,19 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.5",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.9",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "fastclick": "^1.0.6"
+    "fastclick": "^1.0.6",
+    "hagrid": "^3.1.2"
   }
 }
