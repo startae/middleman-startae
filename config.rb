@@ -60,23 +60,23 @@ end
 # ----------------------------------------------
 configure :build do
   # Use relative URLs
-  activate :directory_indexes
+  # activate :directory_indexes
 
   # Activate gzip
-  activate :gzip
+  # activate :gzip
 
   # Minify CSS on build
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
 
   # Add asset fingerprinting to avoid cache issues
-  activate :asset_hash
+  # activate :asset_hash
 
   # Enable cache buster
-  activate :cache_buster
+  # activate :cache_buster
 
   # Activate autoprefixer
-  activate :autoprefixer
+  # activate :autoprefixer
 end
