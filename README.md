@@ -59,6 +59,10 @@ middleman init my_new_project --template=middleman-startae
 
 Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower package installed: `npm install -g bower`)
 
+## itcsscli
+
+itcsscli is a tool for managing the itcss structure. Refer to [itcsscli's webbsite](http://itcsscli.github.io/itcsscli.com/) to see how it works.
+
 ## Build & Dependency Status
 
 [![Dependency Status](http://img.shields.io/gemnasium/startae/middleman-startae.svg?style=flat)](https://gemnasium.com/startae/middleman-startae)
