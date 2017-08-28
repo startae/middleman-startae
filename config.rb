@@ -23,7 +23,7 @@ end
 # ----------------------------------------------
 activate :external_pipeline,
   name: :webpack,
-  command: build? ?  "npm run build" : "npm run start",
+  command: build? ?  "yarn run build" : "yarn run start",
   source: ".tmp/dist",
   latency: 1
 
