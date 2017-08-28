@@ -51,9 +51,6 @@ configure :development do
 
   # Output a pretty html
   ::Slim::Engine.set_options :pretty => true
-
-  # Activate autoprefixer
-  # activate :autoprefixer
 end
 
 # Build-specific configuration
@@ -62,21 +59,6 @@ configure :build do
   # Use relative URLs
   activate :directory_indexes
 
-  # Activate gzip
-  # activate :gzip
-
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash
-
-  # Enable cache buster
-  # activate :cache_buster
-
-  # Activate autoprefixer
-  # activate :autoprefixer
 end
