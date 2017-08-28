@@ -53,14 +53,14 @@ configure :development do
   ::Slim::Engine.set_options :pretty => true
 
   # Activate autoprefixer
-  activate :autoprefixer
+  # activate :autoprefixer
 end
 
 # Build-specific configuration
 # ----------------------------------------------
 configure :build do
   # Use relative URLs
-  # activate :directory_indexes
+  activate :directory_indexes
 
   # Activate gzip
   # activate :gzip
@@ -72,7 +72,7 @@ configure :build do
   # activate :minify_javascript
 
   # Add asset fingerprinting to avoid cache issues
-  # activate :asset_hash
+  activate :asset_hash
 
   # Enable cache buster
   # activate :cache_buster
