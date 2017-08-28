@@ -10,9 +10,6 @@ gem 'middleman', '4.2.1'
 # Middleman LiveReload
 gem 'middleman-livereload', '3.4.6'
 
-# Middleman Autoprefixer
-gem 'middleman-autoprefixer', '2.8'
-
 # Rack Middleware and Utilities
 gem 'rack-contrib', '1.5.0'
 

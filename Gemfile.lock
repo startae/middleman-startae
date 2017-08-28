@@ -8,8 +8,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
-    autoprefixer-rails (7.1.2.6)
-      execjs
     backports (3.8.0)
     coffee-script (2.4.1)
       coffee-script-source
@@ -54,9 +52,6 @@ GEM
       middleman-cli (= 4.2.1)
       middleman-core (= 4.2.1)
       sass (>= 3.4.0, < 4.0)
-    middleman-autoprefixer (2.8.0)
-      autoprefixer-rails (>= 7.0.1, < 8.0.0)
-      middleman-core (>= 3.3.3)
     middleman-cli (4.2.1)
       thor (>= 0.17.0, < 2.0)
     middleman-core (4.2.1)
@@ -125,7 +120,6 @@ PLATFORMS
 DEPENDENCIES
   itcsscli (~> 0.1.14)
   middleman (= 4.2.1)
-  middleman-autoprefixer (= 2.8)
   middleman-livereload (= 3.4.6)
   puma (= 3.9.1)
   rack-contrib (= 1.5.0)
@@ -137,4 +131,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
