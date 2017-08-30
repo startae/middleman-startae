@@ -12,7 +12,7 @@
 * [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files
 * [Slim](http://slim-lang.com): A lightweight templating engine
 * [Webpack](https://webpack.js.org/): A module bundler for modern JavaScript applications
-* [Sass](http://sass-lang.com): Sass: Syntactically Awesome Style Sheets
+* [Sass](http://sass-lang.com): Syntactically Awesome Style Sheets
 * [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf): A sane, scalable and managed CSS architecture
 * [PostCSS](http://postcss.org/): A tool for transforming CSS with JavaScript
 * [Reset CSS](http://meyerweb.com/eric/tools/css/reset/): a reset stylesheet to reduce browser inconsistencies
