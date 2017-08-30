@@ -6,7 +6,7 @@
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/startae/middleman-startae/tree/master)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/startae/middleman-startae)
 
-## 💁 Key Features 
+## Key Features 💁
 
 * Ready to run on [Heroku](http://www.heroku.com) or [Netlify](http://www.netlify.com)
 * [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files
@@ -24,7 +24,7 @@
 * Preconfigured partials
 * Metatags helper
 
-## 🔧 Installation 
+## Installation 🔧
 
 ### Basic installation
 
@@ -72,13 +72,13 @@ Then use the new template argument for the ```middleman init``` command:
 middleman init my_new_project --template=middleman-startae
 ```
 
-## 🏁 Build & Dependency Status
+## Build & Dependency Status 🏁 
 
 [![Dependency Status](http://img.shields.io/gemnasium/startae/middleman-startae.svg?style=flat)](https://gemnasium.com/startae/middleman-startae)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/)
 
 
-## 🤔 Comments & Suggestions? 
+## Comments & Suggestions? 🤔 
 
 Just submit an [issue](https://github.com/startae/middleman-startae/issues).
 
