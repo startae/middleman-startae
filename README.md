@@ -8,6 +8,7 @@
 
 ## Key Features
 
+* Middleman v4
 * Ready to run on [Heroku](http://www.heroku.com) or [Netlify](http://www.netlify.com)
 * [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files
 * [Slim](http://slim-lang.com): A lightweight templating engine
