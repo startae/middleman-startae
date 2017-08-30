@@ -9,11 +9,11 @@
 **Features:**
 * Ready to run on [Heroku](http://www.heroku.com) or [Netlify](http://www.netlify.com)
 * [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files in your site.
-* [Slim](http://slim-lang.com): A lightweight templating engine.
-* [Webpack](https://webpack.js.org/): A module bundler for modern JavaScript applications.
+* [Slim](http://slim-lang.com): A lightweight templating engine
+* [Webpack](https://webpack.js.org/): A module bundler for modern JavaScript applications
 * [Sass](http://sass-lang.com): Sass: Syntactically Awesome Style Sheets
-* [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf): A sane, scalable, managed. CSS architecture from CSS Wizardry.
-* [PostCSS](http://postcss.org/): A tool for transforming CSS with JavaScript.
+* [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf): A sane, scalable and managed CSS architecture
+* [PostCSS](http://postcss.org/): A tool for transforming CSS with JavaScript
 * [itcsscli](http://itcsscli.github.io/itcsscli.com/): a tool for managing the ITCSS structure
 * [Hagrid](https://github.com/fspoettel/hagrid): Simple but powerful flexbox-first grid
 * [Babel](https://babeljs.io/): The compiler for writing next generation Javascript
@@ -69,8 +69,6 @@ Then use the new template argument for the ```middleman init``` command:
 ```
 middleman init my_new_project --template=middleman-startae
 ```
-
-Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower package installed: `npm install -g bower`)
 
 ## Build & Dependency Status
 
