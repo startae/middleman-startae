@@ -8,12 +8,13 @@
 
 **Features:**
 * Ready to run on [Heroku](http://www.heroku.com) or [Netlify](http://www.netlify.com)
-* [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files in your site.
+* [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files
 * [Slim](http://slim-lang.com): A lightweight templating engine
 * [Webpack](https://webpack.js.org/): A module bundler for modern JavaScript applications
 * [Sass](http://sass-lang.com): Sass: Syntactically Awesome Style Sheets
 * [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf): A sane, scalable and managed CSS architecture
 * [PostCSS](http://postcss.org/): A tool for transforming CSS with JavaScript
+* [Reset CSS](http://meyerweb.com/eric/tools/css/reset/): a reset stylesheet to reduce browser inconsistencies
 * [itcsscli](http://itcsscli.github.io/itcsscli.com/): a tool for managing the ITCSS structure
 * [Hagrid](https://github.com/fspoettel/hagrid): Simple but powerful flexbox-first grid
 * [Babel](https://babeljs.io/): The compiler for writing next generation Javascript
@@ -84,4 +85,4 @@ For more help follow [Middleman's docs](https://middlemanapp.com/basics/install/
 
 [Middleman](http://middlemanapp.com/) is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.
 
-Cheers!
+Made with love by [Startaê](https://startae.com/).
