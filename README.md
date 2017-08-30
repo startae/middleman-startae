@@ -45,16 +45,18 @@ For full Middleman documentation, visit the [Middleman website](http://middleman
 
 ### Middleman Template
 
-Middleman supports project templates. To use ```Middleman Startaê``` as a template, clone the Git repository into ```~/.middleman```, like so:
+Middleman supports project templates. To use ```Middleman Startaê``` as a template, just follow these steps:
+
+First install the middleman gem, se you can use the middleman command:
 
 ```
-git clone git://github.com/startae/middleman-startae.git ~/.middleman/middleman-startae
+gem install middleman
 ```
 
-then use the new template argument for the ```middleman init``` command:
+Now you just have to pass the `startae/middleman-startae` to the init command.
 
 ```
-middleman init my_new_project --template=middleman-startae
+middleman init my_new_project --template=startae/middleman-startae
 ```
 
 Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower package installed: `npm install -g bower`)
