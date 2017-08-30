@@ -54,7 +54,7 @@ bundle install
 
 ### Running the app
 
-Use ```middleman``` to do your local live development and ```middleman build``` to render your static file output to the ```/build/``` directory. 
+Use the command ```middleman``` to do your local live development or ```middleman build``` to render your static file output to the ```/build/``` directory.
 
 For the full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
 
