@@ -10,58 +10,67 @@
 * Ready to run on [Heroku](http://www.heroku.com) or [Netlify](http://www.netlify.com)
 * [Livereload](http://livereload.com): automatically refresh your browser whenever you edit files in your site.
 * [Slim](http://slim-lang.com): A lightweight templating engine.
-* [Bower](http://bower.io): A package manager for the web.
+* [Webpack](https://webpack.js.org/): A module bundler for modern JavaScript applications.
 * [Sass](http://sass-lang.com): Sass: Syntactically Awesome Style Sheets
-* [Inuitcss](https://github.com/inuitcss/getting-started): inuitcss is a powerful, Sass-based, BEM, OOCSS framework designed with scalability and performance in mind.
+* [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf): A sane, scalable, managed. CSS architecture from CSS Wizardry.
+* [PostCSS](http://postcss.org/): A tool for transforming CSS with JavaScript.
+* [itcsscli](http://itcsscli.github.io/itcsscli.com/): a tool for managing the ITCSS structure
 * [Hagrid](https://github.com/fspoettel/hagrid): Simple but powerful flexbox-first grid
-* [Coffeescript](http://coffeescript.org)
+* [Babel](https://babeljs.io/): The compiler for writing next generation Javascript
 * Language configuration
 * Gzip
 * Preconfigured partials
 * Metatags helper
 
-
 ## Installation
 
 ### Basic installation
 
-Start by installing [Bundler](http://gembundler.com/), if you don't already have it:
-
-```
-gem install bundler
-```
-
-Then just clone the repository down to your local machine:
+First, just clone the repository down to your local machine:
 
 ```
 git clone http://github.com/startae/middleman-startae.git my_new_project
 ```
 
-Finally, do a ```bundle install``` to install the required gems -- even Middleman itself!
+Install the JS dependencies by running:
 
-Use ```middleman``` to do your live development and ```middleman build``` to render your static file output to the ```/build/``` directory.
+```
+yarn install
+```
 
-For full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
+Install [Bundler](http://gembundler.com/), if you don't already have it:
+
+```
+gem install bundler
+```
+
+Finally, install the required gems with:
+
+```
+bundle install
+```
+
+### Running the app
+
+Use ```middleman``` to do your local live development and ```middleman build``` to render your static file output to the ```/build/``` directory. 
+
+For the full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
 
 ### Middleman Template
 
-Middleman supports project templates. To use ```Middleman Startaê``` as a template, clone the Git repository into ```~/.middleman```, like so:
+Middleman supports project templates. To use **Middleman Startaê** as a template, clone the git repository into ```~/.middleman```, like so:
 
 ```
 git clone git://github.com/startae/middleman-startae.git ~/.middleman/middleman-startae
 ```
 
-then use the new template argument for the ```middleman init``` command:
+Then use the new template argument for the ```middleman init``` command:
 
 ```
 middleman init my_new_project --template=middleman-startae
 ```
 
 Use `bower install` to install the assets in the `bower_components/` directory (you'll need to have Bower package installed: `npm install -g bower`)
-
-## itcsscli
-
-itcsscli is a tool for managing the itcss structure. Refer to [itcsscli's webbsite](http://itcsscli.github.io/itcsscli.com/) to see how it works.
 
 ## Build & Dependency Status
 
