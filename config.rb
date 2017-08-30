@@ -19,6 +19,14 @@ configure :development do
   activate :livereload, :no_swf => true
 end
 
+# Webpack
+# ----------------------------------------------
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ?  "yarn run build" : "yarn run start",
+  source: ".tmp/dist",
+  latency: 1
+
 # Configure assets directories
 # ----------------------------------------------
 set :css_dir, 'assets/stylesheets'
@@ -43,9 +51,6 @@ configure :development do
 
   # Output a pretty html
   ::Slim::Engine.set_options :pretty => true
-
-  # Activate autoprefixer
-  activate :autoprefixer
 end
 
 # Build-specific configuration
@@ -54,21 +59,6 @@ configure :build do
   # Use relative URLs
   activate :directory_indexes
 
-  # Activate gzip
-  activate :gzip
-
-  # Minify CSS on build
-  activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
-
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash
-
-  # Enable cache buster
-  activate :cache_buster
-
-  # Activate autoprefixer
-  activate :autoprefixer
 end
