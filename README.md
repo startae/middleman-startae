@@ -85,4 +85,4 @@ For more help follow [Middleman's docs](https://middlemanapp.com/basics/install/
 
 [Middleman](http://middlemanapp.com/) is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.
 
-Made with love by [Startaê](https://startae.com/).
+Built with love by [Startaê](https://startae.com/).
