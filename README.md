@@ -63,7 +63,7 @@ For the full Middleman documentation, visit the [Middleman website](http://middl
 
 Middleman supports project templates. To use ```Middleman Startaê``` as a template, just follow these steps:
 
-First install the middleman gem, se you can use the middleman command:
+First install the middleman gem, so you can use the middleman command:
 
 ```
 gem install middleman
