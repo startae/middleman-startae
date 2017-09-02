@@ -6,8 +6,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     backports (3.8.0)
     coffee-script (2.4.1)
       coffee-script-source
@@ -89,10 +89,10 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.12.0)
-    public_suffix (2.0.5)
-    puma (3.9.1)
+    public_suffix (3.0.0)
+    puma (3.10.0)
     rack (1.6.8)
-    rack-contrib (1.5.0)
+    rack-contrib (1.6.0)
       rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
@@ -119,13 +119,13 @@ PLATFORMS
 
 DEPENDENCIES
   itcsscli (~> 0.1.14)
-  middleman (= 4.2.1)
-  middleman-livereload (= 3.4.6)
-  puma (= 3.9.1)
-  rack-contrib (= 1.5.0)
-  slim (= 3.0.8)
+  middleman (~> 4.2, >= 4.2.1)
+  middleman-livereload (~> 3.4, >= 3.4.6)
+  puma (~> 3.10)
+  rack-contrib (~> 1.6)
+  slim (~> 3.0, >= 3.0.8)
   tzinfo-data
-  wdm (= 0.1.1)
+  wdm (~> 0.1.1)
 
 RUBY VERSION
    ruby 2.4.1p111
