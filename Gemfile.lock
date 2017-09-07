@@ -96,7 +96,7 @@ GEM
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (1.6.8)
-    rack-contrib (1.5.0)
+    rack-contrib (1.6.0)
       rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
@@ -130,7 +130,7 @@ DEPENDENCIES
   middleman-livereload (= 3.4.6)
   middleman-sprockets (~> 4.1.0)
   puma (= 3.9.1)
-  rack-contrib (= 1.5.0)
+  rack-contrib (= 1.6.0)
   slim (= 3.0.8)
   tzinfo-data
   wdm (= 0.1.1)
