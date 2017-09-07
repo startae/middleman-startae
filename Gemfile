@@ -8,7 +8,7 @@ gem 'puma', '3.9.1'
 gem 'middleman', '4.2.1'
 
 # Middleman Sprockets
-gem "middleman-sprockets", "~> 4.1.0"
+gem "middleman-sprockets", "~> 4.1.1"
 
 # Middleman LiveReload
 gem 'middleman-livereload', '3.4.6'
