@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 # HTTP server for Ruby/Rack recommended by Heroku
-gem 'puma', '3.9.1'
+gem 'puma', '= 3.10.0'
 
 # Middleman
 gem 'middleman', '4.2.1'
