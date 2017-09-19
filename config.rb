@@ -19,12 +19,13 @@ configure :development do
   activate :livereload, :no_swf => true
 end
 
-# Bower Config
+# Webpack
 # ----------------------------------------------
-activate :sprockets
-@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-@bower_assets_path = File.join "#{root}", @bower_config["directory"]
-sprockets.append_path @bower_assets_path
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ?  "yarn run build" : "yarn run start",
+  source: ".tmp/dist",
+  latency: 1
 
 # Configure assets directories
 # ----------------------------------------------
@@ -50,9 +51,6 @@ configure :development do
 
   # Output a pretty html
   ::Slim::Engine.set_options :pretty => true
-
-  # Activate autoprefixer
-  activate :autoprefixer
 end
 
 # Build-specific configuration
@@ -61,21 +59,6 @@ configure :build do
   # Use relative URLs
   activate :directory_indexes
 
-  # Activate gzip
-  activate :gzip
-
-  # Minify CSS on build
-  activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
-
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash
-
-  # Enable cache buster
-  activate :cache_buster
-
-  # Activate autoprefixer
-  activate :autoprefixer
 end

@@ -1,73 +1,32 @@
 @charset "utf-8"
-////
-/// @APPLICATION
-////
 
-// 0. Requirements -- Vendor libraries
-// 1. Settings ------ Sass vars, etc.
-// 2. Tools --------- Functions and mixins.
-// 3. Generic ------- Generic, high-level styling, like resets, etc.
-// 4. Base ---------- Unclasses HTML elements (e.g. `h2`, `ul`).
-// 5. Objects ------- Objects and abstractions.
-// 6. Components ---- Your designed UI elements (inuitcss includes none of these).
-// 7. Trumps -------- Overrides and helper classes.
+// ========================================
+//   application.css.sass
+//   This file is automatically updated by itcsscli.
+// ========================================
+
+
+// [0] Requirements --- Vendor libraries
+// [1] Settings ------- Sass vars, etc.
+// [2] Tools ---------- Functions and mixins.
+// [3] Generic -------- Generic, high-level styling, like resets, etc.
+// [4] Base ----------- Unclasses HTML elements (e.g. `h2`, `ul`).
+// [5] Objects -------- Objects and abstractions.
+// [6] Components ----- Your designed UI elements (inuitcss includes none of these).
+// [7] Trumps --------- Overrides and helper classes.
+
 
 // [0] Requirements
-@import "hagrid/scss/hagrid"
-// Hagrid Breakpoints (xs, sm, md, lg, xl, xxl, lgvsm)
-$hagrid-breakpoints: (xs: "(min-width: 320px)", sm: "(min-width: 540px)", md: "(min-width: 768px)", lg: "(min-width: 1024px)", xl: "(min-width: 1280px)", xxl: "(min-width: 1920px)", lg-sm: "(min-width: 920px) and ( max-height: 600px)")
-// Hagrid Gutters
-$hagrid-gutters: (default: 40px, full: 0, narrow: 30px, wide: 50px)
+@import "requirements/requirements.vendor"
 
 // [1] Settings
-@import "inuit-defaults/settings.defaults"
-@import "settings/settings.global"
-@import "settings/settings.fonts"
 @import "settings/settings.colors"
-@import "settings/settings.motion"
-
-// [2] Tools
-@import "inuit-functions/tools.functions"
-@import "tools/tools.attention"
-@import "tools/tools.intrinsic-ratio"
-@import "tools/tools.ellipsis"
-@import "tools/tools.motion"
+@import "settings/settings.fonts"
+@import "settings/settings.global"
+@import "settings/settings.grid.scss"
 
 // [3] Generic
-@import "inuit-normalize/generic.normalize"
-@import "inuit-box-sizing/generic.box-sizing"
-@import "inuit-reset/generic.reset"
-@import "inuit-shared/generic.shared"
+@import "generic/generic.reset"
 
 // [4] Base
-@import "inuit-page/base.page"
-@import "inuit-lists/base.lists"
-@import "inuit-images/base.images"
-@import "base/base.page"
 @import "base/base.type"
-
-// [5] Objects
-$inuit-btn-radius:        $base-radius
-$inuit-enable-btn--small: true
-$inuit-enable-btn--large: true
-$inuit-enable-btn--full:  true
-@import "inuit-buttons/objects.buttons"
-@import "inuit-list-bare/objects.list-bare"
-@import "inuit-list-block/objects.list-block"
-@import "inuit-list-inline/objects.list-inline"
-@import "inuit-list-ui/objects.list-ui"
-@import "inuit-media/objects.media"
-@import "inuit-flag/objects.flag"
-@import "objects/objects.containers"
-
-// [6] Components
-@import "components/components.buttons"
-// >>> Your components here <<<
-
-// [7] Trumps
-@import "inuit-clearfix/trumps.clearfix"
-
-$inuit-enable-margins:       true
-$inuit-enable-margins--huge: true
-$inuit-enable-margins--none: true
-@import "inuit-spacing/trumps.spacing"
