@@ -23,4 +23,4 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'slim', '~> 3.0', '>= 3.0.8'
 
 # Manage ITCSS structure
-gem 'itcsscli', '~> 0.1.14'
+gem 'itcsscli', '~> 0.1.15'

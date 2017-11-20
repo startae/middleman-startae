@@ -36,7 +36,7 @@ GEM
     hashie (3.5.6)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    itcsscli (0.1.14)
+    itcsscli (0.1.15)
       colorize (~> 0.7.7)
       rb-readline (~> 0.5.3)
     kramdown (1.14.0)
@@ -118,7 +118,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  itcsscli (~> 0.1.14)
+  itcsscli (~> 0.1.15)
   middleman (~> 4.2, >= 4.2.1)
   middleman-livereload (~> 3.4, >= 3.4.6)
   puma (~> 3.10)
