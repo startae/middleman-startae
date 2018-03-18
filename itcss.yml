@@ -5,4 +5,5 @@
 ---
 stylesheets_directory: source/assets/stylesheets
 stylesheets_import_file: application.css
+extension: sass
 
