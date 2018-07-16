@@ -90,7 +90,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.12.0)
     public_suffix (3.0.0)
-    puma (3.11.2)
+    puma (3.12.0)
     rack (2.0.3)
     rack-contrib (2.0.1)
       rack (~> 2.0)
@@ -121,7 +121,7 @@ DEPENDENCIES
   itcsscli (~> 0.1.15)
   middleman (~> 4.2, >= 4.2.1)
   middleman-livereload (~> 3.4, >= 3.4.6)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rack-contrib (~> 2.0)
   slim (~> 3.0, >= 3.0.8)
   tzinfo-data
