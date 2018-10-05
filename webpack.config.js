@@ -2,6 +2,10 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var Clean = require('clean-webpack-plugin')
+var os = require('os');
+
+// Cleaning is disabled on linux development because it causes middleman server to stop serving assets
+var pathsToClean = os.platform() === 'linux' && process.env.NODE_ENV === 'development' ? [] : ['.tmp']
 
 module.exports = {
   entry: {
@@ -78,7 +82,7 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    new Clean(['.tmp']),
+    new Clean(pathsToClean),
     new ExtractTextPlugin('assets/stylesheets/[name].bundle.css'),
   ],
 }
