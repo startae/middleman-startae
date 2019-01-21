@@ -5,7 +5,7 @@ ruby '2.4.1'
 gem 'puma', '~> 3.11'
 
 # Middleman
-gem 'middleman', '~> 4.2', '>= 4.2.1'
+gem 'middleman', '~> 4.3'
 
 # Middleman LiveReload
 gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
