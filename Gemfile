@@ -11,7 +11,7 @@ gem 'middleman', '~> 4.2', '>= 4.2.1'
 gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
 
 # Rack Middleware and Utilities
-gem 'rack-contrib', '~> 2.0'
+gem 'rack-contrib', '~> 2.3'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.1', :platforms => [:mswin, :mingw]
