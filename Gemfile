@@ -8,7 +8,7 @@ gem 'puma', '~> 3.11'
 gem 'middleman', '~> 4.2', '>= 4.2.1'
 
 # Middleman LiveReload
-gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
+gem 'middleman-livereload', '~> 3.4'
 
 # Rack Middleware and Utilities
 gem 'rack-contrib', '~> 2.0'
